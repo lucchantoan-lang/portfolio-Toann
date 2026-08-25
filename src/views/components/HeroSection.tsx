@@ -155,7 +155,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             flexDirection: "column",
             justifyContent: "center",
             alignItems: "flex-start",
-            paddingLeft: "36px",
+            paddingLeft: "76px",
             zIndex: 2,
           }}
         >
