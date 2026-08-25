@@ -118,24 +118,20 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               style={{
                 fontFamily: "'Barlow Condensed', sans-serif",
                 fontWeight: 700,
-                fontSize: "clamp(16px, 2vw, 22px)",
-                lineHeight: 1.3,
+                fontSize: "clamp(18px, 2.2vw, 24px)",
+                lineHeight: 1.35,
                 letterSpacing: "0.04em",
                 textTransform: "uppercase",
                 color: "#fff",
                 marginBottom: "36px",
-                maxWidth: "300px",
+                maxWidth: "380px",
               }}
             >
-              I'M A UI/UX DESIGNER
+              I'M A UI/UX DESIGNER WITH A BACKGROUND IN IT.
               <br />
-              WITH A BACKGROUND IN IT.
+              I ENJOY TURNING COMPLEX PROBLEMS
               <br />
-              I ENJOY TURNING COMPLEX
-              <br />
-              PROBLEMS INTO SIMPLE
-              <br />
-              DIGITAL EXPERIENCES.
+              INTO SIMPLE DIGITAL EXPERIENCES.
             </p>
             <button
               onClick={() => onNavigate("works")}
@@ -144,11 +140,11 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                 color: "#010d04",
                 border: "none",
                 borderRadius: "100px",
-                padding: "16px 36px",
+                padding: "18px 48px",
                 fontFamily: "'Barlow Condensed', sans-serif",
                 fontWeight: 700,
-                fontSize: "13px",
-                letterSpacing: "0.1em",
+                fontSize: "14px",
+                letterSpacing: "0.12em",
                 textTransform: "uppercase",
                 cursor: "pointer",
                 transition: "background 0.2s, transform 0.15s",
