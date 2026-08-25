@@ -237,7 +237,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           marginTop: "-120px",
         }}
       >
-        <div style={{ lineHeight: 0.8, overflow: "hidden" }}>
+        <div style={{ lineHeight: 0.88, overflow: "hidden", paddingBottom: "18px" }}>
           <span
             style={{
               display: "block",
