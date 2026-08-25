@@ -216,7 +216,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           overflow: "hidden",
           position: "relative",
           zIndex: 3,
-          marginTop: "-90px",
+          marginTop: "-120px",
         }}
       >
         <div style={{ lineHeight: 0.8, overflow: "hidden" }}>
@@ -225,7 +225,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               display: "block",
               fontFamily: "'Barlow Condensed', sans-serif",
               fontWeight: 900,
-              fontSize: "clamp(70px, 17vw, 220px)",
+              fontSize: "clamp(75px, 18.5vw, 240px)",
               letterSpacing: "-0.02em",
               textTransform: "uppercase",
               color: "#ffffff",
