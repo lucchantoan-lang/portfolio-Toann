@@ -1,5 +1,6 @@
 import { NavItem, ServiceItem, ProjectItem, TeamMember, StatItem } from "./types";
 import hdbankImg from "../imports/hdbank-di-cmb.png";
+import tiktokImg from "../imports/tiktok-shop-summit.png";
 
 export const NAV_ITEMS: NavItem[] = ["WORKS", "ABOUT", "SKILLS", "RESUME", "CONTACT"];
 
@@ -64,12 +65,12 @@ export const PROJECTS_LIST: ProjectItem[] = [
   },
   {
     num: "02",
-    title: "ATELIER — VISUAL SYSTEM",
-    category: "Design System & Brand Experience",
-    year: "2024",
-    desc: "Hệ thống thiết kế UI Kit & Design System toàn diện giúp đồng bộ hóa trải nghiệm thị giác đa kênh cho thương hiệu thương mại điện tử cao cấp.",
-    tags: ["Design System", "UI/UX", "Component Library", "Web App"],
-    img: "https://images.unsplash.com/photo-1781615851923-2f1e05d7abfa?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&w=900&h=600&q=80",
+    title: "TIKTOK SHOP SUMMIT VIETNAM 2026",
+    category: "Event Visual & Digital Experience",
+    year: "2026",
+    desc: "Sự kiện thường niên quy tụ các đối tác chiến lược của TikTok Shop bao gồm nhà bán hàng, thương hiệu, nhà sáng tạo nội dung E-commerce và đối tác dịch vụ hàng đầu nhằm cập nhật tầm nhìn chiến lược, kết nối mở rộng hợp tác và phát triển giải pháp thương mại điện tử đột phá.",
+    tags: ["Event Experience", "UI/UX Design", "E-Commerce", "Visual Identity"],
+    img: tiktokImg,
     wide: true,
   },
   {
