@@ -36,37 +36,45 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
       {/* ── 1. NAVBAR ───────────────────────────────── */}
       <Navbar navItems={navItems} onNavigate={onNavigate} />
 
-      {/* ── 2. HERO 3-COLUMN CONTENT (CĂN ĐỀU TOP 3 CỘT) ─ */}
+      {/* ── 2. HERO 3-COLUMN CONTENT (CĂN GIỮA & TRẢI ĐỀU 2 BÊN) ─ */}
       <div
         style={{
           position: "relative",
           flex: 1,
           display: "grid",
-          gridTemplateColumns: "1.15fr 1fr 1.15fr",
-          alignItems: "start",
+          gridTemplateColumns: "1.2fr 1fr 1.2fr",
+          alignItems: "center",
           padding: "0 48px",
           zIndex: 2,
         }}
       >
-        {/* ── CỘT TRÁI: TIÊU ĐỀ CHÍNH ────────────────── */}
-        <div style={{ paddingTop: "20px", zIndex: 2 }}>
+        {/* ── CỘT TRÁI: TIÊU ĐỀ CHÍNH TRẢI ĐỀU ───────── */}
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "flex-start",
+            zIndex: 2,
+            paddingRight: "20px",
+          }}
+        >
           <h1
             style={{
               fontFamily: "'Barlow Condensed', sans-serif",
               fontWeight: 900,
-              fontSize: "clamp(38px, 4.6vw, 72px)",
-              lineHeight: 0.94,
+              fontSize: "clamp(42px, 4.8vw, 76px)",
+              lineHeight: 0.96,
               letterSpacing: "-0.01em",
               textTransform: "uppercase",
-              color: "#fff",
-              margin: "0 0 20px 0",
+              color: "#ffffff",
+              margin: "0 0 24px 0",
+              maxWidth: "460px",
             }}
           >
-            TURNING
+            TURNING IDEAS
             <br />
-            IDEAS INTO
-            <br />
-            SIMPLE
+            INTO SIMPLE
             <br />
             EXPERIENCES.
           </h1>
@@ -74,73 +82,51 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             style={{
               fontFamily: "'Barlow Condensed', sans-serif",
               fontWeight: 500,
-              fontSize: "12px",
-              letterSpacing: "0.08em",
-              lineHeight: 1.6,
+              fontSize: "13px",
+              letterSpacing: "0.1em",
+              lineHeight: 1.65,
               color: "rgba(255,255,255,0.75)",
               textTransform: "uppercase",
-              maxWidth: "240px",
+              maxWidth: "360px",
+              margin: 0,
             }}
           >
-            UI/UX DESIGNER
+            UI/UX DESIGNER FOCUSED ON CREATING
             <br />
-            FOCUSED ON CREATING
-            <br />
-            SIMPLE & USER-FRIENDLY
-            <br />
-            DIGITAL EXPERIENCES.
+            SIMPLE & USER-FRIENDLY DIGITAL EXPERIENCES.
           </p>
         </div>
 
-        {/* ── CỘT GIỮA: ẢNH CHÂN DUNG & HÀO QUANG ────── */}
+        {/* ── CỘT GIỮA: ẢNH CHÂN DUNG SẠCH (KHÔNG VIỀN ÁP ĐẶT) ────── */}
         <div
           style={{
             position: "relative",
             display: "flex",
             justifyContent: "center",
-            alignItems: "flex-start",
-            paddingTop: "20px",
+            alignItems: "center",
             height: "100%",
             zIndex: 1,
           }}
         >
-          {/* Hào quang lớp ngoài (Radiant Ambient Aura) */}
+          {/* Hào quang nền mờ dịu tự nhiên (không viền cứng) */}
           <div
             style={{
               position: "absolute",
-              top: "10px",
+              top: "50%",
               left: "50%",
-              transform: "translateX(-50%)",
-              width: "480px",
-              height: "480px",
+              transform: "translate(-50%, -50%)",
+              width: "440px",
+              height: "440px",
               borderRadius: "50%",
               background:
-                "radial-gradient(circle, rgba(34, 197, 94, 0.45) 0%, rgba(74, 222, 128, 0.2) 45%, transparent 75%)",
-              filter: "blur(60px)",
+                "radial-gradient(circle, rgba(34, 197, 94, 0.35) 0%, rgba(34, 197, 94, 0.1) 50%, transparent 70%)",
+              filter: "blur(50px)",
               pointerEvents: "none",
               zIndex: 0,
             }}
           />
 
-          {/* Hào quang tâm sáng (Core Bright Glow) */}
-          <div
-            style={{
-              position: "absolute",
-              top: "30px",
-              left: "50%",
-              transform: "translateX(-50%)",
-              width: "340px",
-              height: "380px",
-              borderRadius: "50%",
-              background:
-                "radial-gradient(ellipse at center, rgba(255, 255, 255, 0.28) 0%, rgba(34, 197, 94, 0.45) 50%, transparent 75%)",
-              filter: "blur(35px)",
-              pointerEvents: "none",
-              zIndex: 0,
-            }}
-          />
-
-          {/* Ảnh chân dung (vừa vặn màn hình 1st screen) */}
+          {/* Ảnh chân dung sạch không viền shadow cứng */}
           <img
             src={heroAvatarImg}
             alt="CRTOAN — UI/UX Designer"
@@ -148,30 +134,28 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               position: "relative",
               zIndex: 1,
               width: "100%",
-              maxWidth: "460px",
-              maxHeight: "calc(100vh - 240px)",
+              maxWidth: "480px",
+              maxHeight: "calc(100vh - 220px)",
               height: "auto",
               objectFit: "contain",
-              objectPosition: "center top",
+              objectPosition: "center center",
               display: "block",
-              filter:
-                "drop-shadow(0 0 35px rgba(34, 197, 94, 0.4)) drop-shadow(0 25px 45px rgba(0,0,0,0.7))",
               maskImage:
-                "linear-gradient(to bottom, black 82%, transparent 100%)",
+                "linear-gradient(to bottom, black 80%, transparent 100%)",
               WebkitMaskImage:
-                "linear-gradient(to bottom, black 82%, transparent 100%)",
+                "linear-gradient(to bottom, black 80%, transparent 100%)",
             }}
           />
         </div>
 
-        {/* ── CỘT PHẢI: BIO & CTA BUTTON ─────────────── */}
+        {/* ── CỘT PHẢI: BIO & CTA BUTTON TRẢI ĐỀU CÂN ĐỐI ─────── */}
         <div
           style={{
-            paddingTop: "20px",
-            paddingLeft: "24px",
             display: "flex",
             flexDirection: "column",
+            justifyContent: "center",
             alignItems: "flex-start",
+            paddingLeft: "36px",
             zIndex: 2,
           }}
         >
@@ -179,13 +163,13 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             style={{
               fontFamily: "'Barlow Condensed', sans-serif",
               fontWeight: 700,
-              fontSize: "clamp(16px, 1.8vw, 22px)",
-              lineHeight: 1.35,
+              fontSize: "clamp(18px, 2vw, 24px)",
+              lineHeight: 1.4,
               letterSpacing: "0.04em",
               textTransform: "uppercase",
-              color: "#fff",
-              marginBottom: "28px",
-              maxWidth: "340px",
+              color: "#ffffff",
+              marginBottom: "32px",
+              maxWidth: "420px",
             }}
           >
             I'M A UI/UX DESIGNER WITH A BACKGROUND IN IT.
@@ -197,11 +181,11 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           <button
             onClick={() => onNavigate("works")}
             style={{
-              background: "#fff",
+              background: "#ffffff",
               color: "#010d04",
               border: "none",
               borderRadius: "100px",
-              padding: "16px 40px",
+              padding: "16px 44px",
               fontFamily: "'Barlow Condensed', sans-serif",
               fontWeight: 700,
               fontSize: "14px",
@@ -215,7 +199,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               e.currentTarget.style.transform = "scale(1.03)";
             }}
             onMouseLeave={(e) => {
-              e.currentTarget.style.background = "#fff";
+              e.currentTarget.style.background = "#ffffff";
               e.currentTarget.style.transform = "scale(1)";
             }}
           >
