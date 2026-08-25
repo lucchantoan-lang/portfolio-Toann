@@ -1,6 +1,7 @@
 import React from "react";
 import { NavItem } from "../../models/types";
 import { Navbar } from "./Navbar";
+import heroAvatarImg from "../../imports/hero-avatar.png";
 
 interface HeroSectionProps {
   navItems: NavItem[];
@@ -94,14 +95,14 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             }}
           >
             <img
-              src="https://images.unsplash.com/photo-1674507887562-ff0183e867ed?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&w=600&h=700&q=80"
-              alt="Dramatic portrait"
+              src={heroAvatarImg}
+              alt="CRTOAN — UI/UX Designer"
               style={{
                 width: "100%",
                 maxWidth: "480px",
                 height: "560px",
                 objectFit: "cover",
-                objectPosition: "center top",
+                objectPosition: "center 10%",
                 display: "block",
                 maskImage:
                   "linear-gradient(to bottom, transparent 0%, black 12%, black 75%, transparent 100%), linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%)",
