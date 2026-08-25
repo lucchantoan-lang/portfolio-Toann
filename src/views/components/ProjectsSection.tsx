@@ -71,7 +71,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
       </div>
 
       {/* Projects List - 2 Column Layout per project (Intro Left | Banner Right) */}
-      <div style={{ display: "flex", flexDirection: "column", gap: "56px" }}>
+      <div style={{ display: "flex", flexDirection: "column", gap: "64px" }}>
         {projects.map((p, i) => (
           <div
             key={i}
@@ -82,14 +82,22 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
               gridTemplateColumns: "1fr 1.35fr",
               gap: "48px",
               alignItems: "center",
-              background: "rgba(255,255,255,0.015)",
-              border: "1px solid rgba(255,255,255,0.06)",
-              borderRadius: "20px",
-              padding: "40px",
-              transition: "border-color 0.3s, background 0.3s, transform 0.3s",
-              borderColor: hoveredProject === i ? "rgba(34, 197, 94, 0.3)" : "rgba(255,255,255,0.06)",
-              backgroundColor:
-                hoveredProject === i ? "rgba(255,255,255,0.03)" : "rgba(255,255,255,0.015)",
+              background:
+                hoveredProject === i
+                  ? "linear-gradient(135deg, #0b2914 0%, #06190c 100%)"
+                  : "linear-gradient(135deg, #082010 0%, #041408 100%)",
+              border:
+                hoveredProject === i
+                  ? "1px solid rgba(34, 197, 94, 0.6)"
+                  : "1px solid rgba(255, 255, 255, 0.16)",
+              borderRadius: "24px",
+              padding: "44px",
+              boxShadow:
+                hoveredProject === i
+                  ? "0 28px 64px -12px rgba(0, 0, 0, 0.7), 0 0 24px rgba(34, 197, 94, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.18)"
+                  : "0 20px 50px -10px rgba(0, 0, 0, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.12)",
+              transition: "all 0.35s cubic-bezier(0.16, 1, 0.3, 1)",
+              transform: hoveredProject === i ? "translateY(-3px)" : "translateY(0)",
             }}
           >
             {/* ── CỘT TRÁI: GIỚI THIỆU DỰ ÁN ───────────────── */}
@@ -127,16 +135,17 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
                       width: "4px",
                       height: "4px",
                       borderRadius: "50%",
-                      background: "rgba(255,255,255,0.3)",
+                      background: "rgba(255,255,255,0.4)",
                     }}
                   />
                   <span
                     style={{
                       fontFamily: "'Barlow Condensed', sans-serif",
-                      fontSize: "12px",
-                      color: "rgba(255,255,255,0.45)",
+                      fontSize: "13px",
+                      color: "rgba(255,255,255,0.7)",
                       letterSpacing: "0.15em",
                       textTransform: "uppercase",
+                      fontWeight: 600,
                     }}
                   >
                     {p.year}
@@ -147,12 +156,12 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
                 <div
                   style={{
                     fontFamily: "'Barlow Condensed', sans-serif",
-                    fontSize: "12px",
-                    color: "rgba(255,255,255,0.6)",
+                    fontSize: "13px",
+                    color: "rgba(255,255,255,0.85)",
                     letterSpacing: "0.12em",
                     textTransform: "uppercase",
-                    fontWeight: 600,
-                    marginBottom: "8px",
+                    fontWeight: 700,
+                    marginBottom: "10px",
                   }}
                 >
                   {p.category}
@@ -163,12 +172,13 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
                   style={{
                     fontFamily: "'Barlow Condensed', sans-serif",
                     fontWeight: 900,
-                    fontSize: "clamp(28px, 3.5vw, 44px)",
+                    fontSize: "clamp(30px, 3.8vw, 46px)",
                     textTransform: "uppercase",
                     margin: "0 0 20px 0",
                     letterSpacing: "-0.01em",
                     lineHeight: 1.05,
-                    color: "#fff",
+                    color: "#ffffff",
+                    textShadow: "0 2px 10px rgba(0,0,0,0.5)",
                   }}
                 >
                   {p.title}
@@ -180,9 +190,9 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
                     style={{
                       fontFamily: "'Barlow', sans-serif",
                       fontSize: "15px",
-                      lineHeight: 1.75,
-                      color: "rgba(255,255,255,0.7)",
-                      margin: "0 0 28px 0",
+                      lineHeight: 1.8,
+                      color: "rgba(255,255,255,0.9)",
+                      margin: "0 0 32px 0",
                     }}
                   >
                     {p.desc}
@@ -195,8 +205,8 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
                     style={{
                       display: "flex",
                       flexWrap: "wrap",
-                      gap: "8px",
-                      marginBottom: "32px",
+                      gap: "10px",
+                      marginBottom: "36px",
                     }}
                   >
                     {p.tags.map((tag) => (
@@ -204,15 +214,15 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
                         key={tag}
                         style={{
                           fontFamily: "'Barlow Condensed', sans-serif",
-                          fontSize: "11px",
+                          fontSize: "12px",
                           letterSpacing: "0.08em",
                           textTransform: "uppercase",
-                          color: "rgba(255,255,255,0.75)",
-                          background: "rgba(255,255,255,0.05)",
-                          border: "1px solid rgba(255,255,255,0.12)",
+                          color: "#ffffff",
+                          background: "rgba(255,255,255,0.08)",
+                          border: "1px solid rgba(255,255,255,0.24)",
                           borderRadius: "100px",
-                          padding: "5px 14px",
-                          fontWeight: 500,
+                          padding: "6px 16px",
+                          fontWeight: 600,
                         }}
                       >
                         {tag}
@@ -226,32 +236,25 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
               <div>
                 <button
                   style={{
-                    display: "inline-flex",
-                    alignItems: "center",
-                    gap: "10px",
-                    background: "transparent",
-                    color: hoveredProject === i ? "#22c55e" : "#fff",
-                    border: "none",
-                    padding: "0",
+                    display: "inline-block",
+                    background:
+                      hoveredProject === i
+                        ? "#22c55e"
+                        : "rgba(34, 197, 94, 0.12)",
+                    color: hoveredProject === i ? "#010d04" : "#22c55e",
+                    border: "1px solid rgba(34, 197, 94, 0.4)",
+                    borderRadius: "100px",
+                    padding: "14px 32px",
                     fontFamily: "'Barlow Condensed', sans-serif",
                     fontWeight: 700,
                     fontSize: "13px",
                     letterSpacing: "0.12em",
                     textTransform: "uppercase",
                     cursor: "pointer",
-                    transition: "color 0.2s, transform 0.2s",
+                    transition: "all 0.25s ease",
                   }}
                 >
-                  <span>VIEW CASE STUDY</span>
-                  <span
-                    style={{
-                      fontSize: "16px",
-                      transition: "transform 0.2s",
-                      transform: hoveredProject === i ? "translateX(6px)" : "translateX(0)",
-                    }}
-                  >
-                    →
-                  </span>
+                  VIEW CASE STUDY
                 </button>
               </div>
             </div>
@@ -260,11 +263,11 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
             <div
               style={{
                 position: "relative",
-                borderRadius: "14px",
+                borderRadius: "16px",
                 overflow: "hidden",
                 aspectRatio: "16/10",
-                boxShadow: "0 20px 40px rgba(0,0,0,0.5)",
-                border: "1px solid rgba(255,255,255,0.08)",
+                boxShadow: "0 20px 45px rgba(0,0,0,0.6)",
+                border: "1px solid rgba(255,255,255,0.15)",
                 cursor: "pointer",
               }}
             >
@@ -286,8 +289,8 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
                   inset: 0,
                   background:
                     hoveredProject === i
-                      ? "rgba(0,0,0,0.05)"
-                      : "rgba(0,0,0,0.2)",
+                      ? "rgba(0,0,0,0.02)"
+                      : "rgba(0,0,0,0.12)",
                   transition: "background 0.4s",
                 }}
               />

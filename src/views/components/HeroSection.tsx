@@ -140,7 +140,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                 color: "#010d04",
                 border: "none",
                 borderRadius: "100px",
-                padding: "18px 48px",
+                padding: "16px 40px",
                 fontFamily: "'Barlow Condensed', sans-serif",
                 fontWeight: 700,
                 fontSize: "14px",
@@ -158,7 +158,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                 e.currentTarget.style.transform = "scale(1)";
               }}
             >
-              VIEW PROJECTS.
+              VIEW PROJECTS
             </button>
           </div>
         </div>

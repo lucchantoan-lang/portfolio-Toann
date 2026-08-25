@@ -3,7 +3,7 @@ import { usePortfolioController } from "../controllers/usePortfolioController";
 import { HeroSection } from "./components/HeroSection";
 import { ProjectsSection } from "./components/ProjectsSection";
 import { ServicesSection } from "./components/ServicesSection";
-import { AboutSection } from "./components/AboutSection";
+import { AboutMeSection } from "./components/AboutMeSection";
 import { TeamSection } from "./components/TeamSection";
 import { ContactSection } from "./components/ContactSection";
 
@@ -39,6 +39,9 @@ export const PortfolioView: React.FC = () => {
         onNavigate={scrollTo}
       />
 
+      {/* ── ABOUT ME ─────────────────────────────────── */}
+      <AboutMeSection />
+
       {/* ── PROJECTS ─────────────────────────────────── */}
       <ProjectsSection
         projects={projectsList}
@@ -52,9 +55,6 @@ export const PortfolioView: React.FC = () => {
         openService={openService}
         onToggleService={toggleService}
       />
-
-      {/* ── ABOUT ────────────────────────────────────── */}
-      <AboutSection stats={studioStats} />
 
       {/* ── TEAM ─────────────────────────────────────── */}
       <TeamSection team={teamMembers} />
