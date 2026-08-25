@@ -72,69 +72,77 @@ export const AboutMeSection: React.FC = () => {
           display: "grid",
           gridTemplateColumns: "1fr 1.25fr",
           gap: "64px",
-          alignItems: "center",
+          alignItems: "stretch",
           marginBottom: "80px",
         }}
       >
         {/* ── CỘT TRÁI: TEXT & STATS ───────────────────── */}
-        <div style={{ display: "flex", flexDirection: "column", justifyContent: "center" }}>
-          <span
-            style={{
-              fontFamily: "'Barlow Condensed', sans-serif",
-              fontSize: "12px",
-              letterSpacing: "0.2em",
-              color: "#22c55e",
-              textTransform: "uppercase",
-              fontWeight: 700,
-            }}
-          >
-            ABOUT ME
-          </span>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "space-between",
+          }}
+        >
+          <div>
+            <span
+              style={{
+                fontFamily: "'Barlow Condensed', sans-serif",
+                fontSize: "12px",
+                letterSpacing: "0.2em",
+                color: "#22c55e",
+                textTransform: "uppercase",
+                fontWeight: 700,
+              }}
+            >
+              ABOUT ME
+            </span>
 
-          <h2
-            style={{
-              fontFamily: "'Barlow Condensed', sans-serif",
-              fontWeight: 900,
-              fontSize: "clamp(38px, 4.2vw, 68px)",
-              lineHeight: 0.98,
-              textTransform: "uppercase",
-              margin: "16px 0 32px 0",
-              letterSpacing: "-0.01em",
-              color: "#ffffff",
-            }}
-          >
-            I DESIGN SIMPLE DIGITAL
-            <br />
-            EXPERIENCES, NOT JUST UI.
-          </h2>
+            <h2
+              style={{
+                fontFamily: "'Barlow Condensed', sans-serif",
+                fontWeight: 900,
+                fontSize: "clamp(38px, 4.2vw, 68px)",
+                lineHeight: 0.98,
+                textTransform: "uppercase",
+                margin: "16px 0 28px 0",
+                letterSpacing: "-0.01em",
+                color: "#ffffff",
+              }}
+            >
+              I DESIGN SIMPLE DIGITAL
+              <br />
+              EXPERIENCES, NOT JUST UI.
+            </h2>
 
-          <p
-            style={{
-              fontFamily: "'Barlow', sans-serif",
-              fontSize: "15px",
-              color: "rgba(255,255,255,0.7)",
-              lineHeight: 1.8,
-              marginBottom: "20px",
-            }}
-          >
-            Hi, I'm <strong style={{ color: "#fff" }}>Toan</strong> — a UI/UX Designer with
-            a background in Information Technology. I enjoy turning user needs and
-            complex problems into simple, intuitive digital experiences.
-          </p>
+            <p
+              style={{
+                fontFamily: "'Barlow', sans-serif",
+                fontSize: "15px",
+                color: "rgba(255,255,255,0.7)",
+                lineHeight: 1.8,
+                marginBottom: "18px",
+              }}
+            >
+              Hi, I'm <strong style={{ color: "#fff" }}>Toan</strong> — a UI/UX Designer with
+              a background in Information Technology. I enjoy turning user needs and
+              complex problems into simple, intuitive digital experiences.
+            </p>
 
-          <p
-            style={{
-              fontFamily: "'Barlow', sans-serif",
-              fontSize: "15px",
-              color: "rgba(255,255,255,0.7)",
-              lineHeight: 1.8,
-              marginBottom: "36px",
-            }}
-          >
-            My design process starts with understanding users, their needs, and their
-            goals. I focus on creating clear interfaces, smooth user flows, and
-            practical solutions that are easy to use.
-          </p>
+            <p
+              style={{
+                fontFamily: "'Barlow', sans-serif",
+                fontSize: "15px",
+                color: "rgba(255,255,255,0.7)",
+                lineHeight: 1.8,
+                marginBottom: "32px",
+              }}
+            >
+              My design process starts with understanding users, their needs, and their
+              goals. I focus on creating clear interfaces, smooth user flows, and
+              practical solutions that are easy to use.
+            </p>
+          </div>
 
           {/* Stats 2 cột */}
           <div
@@ -142,7 +150,7 @@ export const AboutMeSection: React.FC = () => {
               display: "grid",
               gridTemplateColumns: "1fr 1fr",
               gap: "36px",
-              paddingTop: "28px",
+              paddingTop: "24px",
               borderTop: "1px solid rgba(255,255,255,0.08)",
             }}
           >
@@ -204,14 +212,15 @@ export const AboutMeSection: React.FC = () => {
           </div>
         </div>
 
-        {/* ── CỘT PHẢI: ẢNH CHÂN DUNG (LỚN & CÂN ĐỐI) ─── */}
+        {/* ── CỘT PHẢI: ẢNH CHÂN DUNG (CHIỀU CAO KHỚP 100% CỘT TEXT) ─── */}
         <div
           style={{
             position: "relative",
             borderRadius: "28px",
             overflow: "hidden",
             width: "100%",
-            aspectRatio: "16 / 10.5",
+            height: "100%",
+            minHeight: "100%",
             boxShadow:
               "0 32px 70px rgba(0,0,0,0.65), 0 0 0 1px rgba(255,255,255,0.12)",
           }}
