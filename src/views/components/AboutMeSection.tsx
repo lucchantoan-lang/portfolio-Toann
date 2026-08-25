@@ -63,7 +63,7 @@ export const AboutMeSection: React.FC = () => {
       id="about"
       style={{
         background: "#020e05",
-        padding: "120px 48px",
+        padding: "100px 48px 40px",
         position: "relative",
       }}
     >

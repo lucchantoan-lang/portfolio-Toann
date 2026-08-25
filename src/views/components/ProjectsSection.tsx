@@ -13,7 +13,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
   onHoverProject,
 }) => {
   return (
-    <section id="works" style={{ background: "#020e05", padding: "120px 48px" }}>
+    <section id="works" style={{ background: "#020e05", padding: "40px 48px 120px" }}>
       {/* Header */}
       <div
         style={{
