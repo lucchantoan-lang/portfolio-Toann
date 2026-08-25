@@ -1,5 +1,5 @@
 import React from "react";
-import avatarImg from "../../imports/avatar.jpg";
+import avatarImg from "../../imports/avatar.png";
 
 const uiSkills = [
   "UI Design",
