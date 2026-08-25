@@ -177,7 +177,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               display: "block",
               fontFamily: "'Barlow Condensed', sans-serif",
               fontWeight: 900,
-              fontSize: "clamp(70px, 14vw, 220px)",
+              fontSize: "clamp(80px, 20vw, 240px)",
               letterSpacing: "-0.02em",
               textTransform: "uppercase",
               color: "#fff",
