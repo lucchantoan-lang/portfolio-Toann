@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@400;500;600&display=swap');
+@import 'tailwindcss';
+
+@theme inline {
+  --color-background: #0a0000;
+  --color-foreground: #ffffff;
+  --color-crimson: #22c55e;
+  --color-crimson-mid: #14532d;
+  --color-crimson-dark: #010d04;
+  --font-display: 'Barlow Condensed', sans-serif;
+  --font-body: 'Barlow', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #0a0000;
+  color: #ffffff;
+  font-family: 'Barlow', sans-serif;
+}

@@ -1,0 +1,10 @@
+{
+  "description": "Create stunning hero pages effortlessly with customizable templates, perfect for businesses and creatives looking to enhance their online presence.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
