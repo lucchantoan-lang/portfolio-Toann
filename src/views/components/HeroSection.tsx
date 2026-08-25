@@ -124,10 +124,18 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                 textTransform: "uppercase",
                 color: "#fff",
                 marginBottom: "36px",
-                maxWidth: "280px",
+                maxWidth: "300px",
               }}
             >
-              WE DESIGN, BUILD, AND LAUNCH EXPERIENCES THAT CAPTURE ATTENTION AND DRIVE RESULTS.
+              I'M A UI/UX DESIGNER
+              <br />
+              WITH A BACKGROUND IN IT.
+              <br />
+              I ENJOY TURNING COMPLEX
+              <br />
+              PROBLEMS INTO SIMPLE
+              <br />
+              DIGITAL EXPERIENCES.
             </p>
             <button
               onClick={() => onNavigate("projects")}
