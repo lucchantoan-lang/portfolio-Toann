@@ -36,7 +36,7 @@ export const Navbar: React.FC<NavbarProps> = ({ navItems, onNavigate }) => {
             letterSpacing: "0.12em",
           }}
         >
-          FORMA
+          CRTOAN
         </span>
       </div>
       <div style={{ display: "flex", gap: "44px" }}>

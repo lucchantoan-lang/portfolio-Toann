@@ -163,7 +163,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ socialLinks }) =
                 letterSpacing: "0.12em",
               }}
             >
-              FORMA
+              CRTOAN
             </span>
           </div>
           <div style={{ display: "flex", gap: "32px" }}>
@@ -195,7 +195,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ socialLinks }) =
               letterSpacing: "0.1em",
             }}
           >
-            © 2025 FORMA STUDIO. ALL RIGHTS RESERVED.
+            © 2025 CRTOAN. ALL RIGHTS RESERVED.
           </span>
         </div>
       </div>

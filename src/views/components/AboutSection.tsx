@@ -54,7 +54,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ stats }) => {
               marginBottom: "24px",
             }}
           >
-            Founded in 2018, FORMA is an independent creative production studio working with bold
+            Founded in 2018, CRTOAN is an independent creative studio working with bold
             brands and ambitious founders. We believe that extraordinary ideas deserve
             extraordinary execution — and we refuse to settle for anything less.
           </p>

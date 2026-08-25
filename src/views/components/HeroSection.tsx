@@ -47,7 +47,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               style={{
                 fontFamily: "'Barlow Condensed', sans-serif",
                 fontWeight: 900,
-                fontSize: "clamp(60px, 8vw, 110px)",
+                fontSize: "clamp(54px, 7.5vw, 100px)",
                 lineHeight: 0.92,
                 letterSpacing: "-0.01em",
                 textTransform: "uppercase",
@@ -55,13 +55,13 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                 margin: "0 0 28px 0",
               }}
             >
-              BEYOND
+              TURNING
               <br />
-              IDEAS.
+              IDEAS INTO
               <br />
-              INTO
+              SIMPLE
               <br />
-              IMPACT.
+              EXPERIENCES.
             </h1>
             <p
               style={{
@@ -72,14 +72,16 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                 lineHeight: 1.6,
                 color: "rgba(255,255,255,0.75)",
                 textTransform: "uppercase",
-                maxWidth: "200px",
+                maxWidth: "240px",
               }}
             >
-              CREATIVE PRODUCTION
+              UI/UX DESIGNER
               <br />
-              FOR BRANDS THAT
+              FOCUSED ON CREATING
               <br />
-              REFUSE TO BLEND IN.
+              SIMPLE & USER-FRIENDLY
+              <br />
+              DIGITAL EXPERIENCES.
             </p>
           </div>
 
@@ -158,7 +160,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
         </div>
       </div>
 
-      {/* FORMA Banner */}
+      {/* CRTOAN Banner */}
       <div
         style={{
           background: "transparent",
@@ -175,7 +177,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               display: "block",
               fontFamily: "'Barlow Condensed', sans-serif",
               fontWeight: 900,
-              fontSize: "clamp(120px, 22vw, 340px)",
+              fontSize: "clamp(100px, 20vw, 320px)",
               letterSpacing: "-0.02em",
               textTransform: "uppercase",
               color: "#fff",
@@ -184,7 +186,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               userSelect: "none",
             }}
           >
-            FORMA
+            CRTOAN
           </span>
         </div>
         <div
