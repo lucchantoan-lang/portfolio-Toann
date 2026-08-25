@@ -1,4 +1,5 @@
 import { NavItem, ServiceItem, ProjectItem, TeamMember, StatItem } from "./types";
+import hdbankImg from "../imports/hdbank-di-cmb.png";
 
 export const NAV_ITEMS: NavItem[] = ["PROJECTS", "SERVICES", "TEAM", "ABOUT", "CONTACTS"];
 
@@ -53,10 +54,10 @@ export const SERVICES_LIST: ServiceItem[] = [
 export const PROJECTS_LIST: ProjectItem[] = [
   {
     num: "01",
-    title: "DELTA — BRAND IDENTITY",
-    category: "Branding & Design",
+    title: "HD BANK DI-CMD",
+    category: "Digital Banking & Experience",
     year: "2025",
-    img: "https://images.unsplash.com/photo-1786472971590-d20a64535f58?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&w=900&h=600&q=80",
+    img: hdbankImg,
     wide: true,
   },
   {
