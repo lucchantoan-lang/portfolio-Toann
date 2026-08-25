@@ -16,218 +16,235 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
 }) => {
   return (
     <>
+    <div
+      id="home"
+      style={{
+        position: "relative",
+        width: "100%",
+        height: "100vh",
+        minHeight: "700px",
+        maxHeight: "1080px",
+        background:
+          "radial-gradient(ellipse 70% 80% at 50% 40%, #166534 0%, #14532d 40%, #052e16 70%, #010d04 100%)",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "space-between",
+        overflow: "hidden",
+        boxSizing: "border-box",
+      }}
+    >
+      {/* ── 1. NAVBAR ───────────────────────────────── */}
+      <Navbar navItems={navItems} onNavigate={onNavigate} />
+
+      {/* ── 2. HERO 3-COLUMN CONTENT (CĂN ĐỀU TOP 3 CỘT) ─ */}
       <div
-        id="home"
         style={{
           position: "relative",
-          width: "100%",
-          minHeight: "100vh",
-          background:
-            "radial-gradient(ellipse 70% 80% at 50% 40%, #166534 0%, #14532d 40%, #052e16 70%, #010d04 100%)",
-          display: "flex",
-          flexDirection: "column",
+          flex: 1,
+          display: "grid",
+          gridTemplateColumns: "1.15fr 1fr 1.15fr",
+          alignItems: "start",
+          padding: "0 48px",
+          zIndex: 2,
         }}
       >
-        {/* Navigation */}
-        <Navbar navItems={navItems} onNavigate={onNavigate} />
+        {/* ── CỘT TRÁI: TIÊU ĐỀ CHÍNH ────────────────── */}
+        <div style={{ paddingTop: "20px", zIndex: 2 }}>
+          <h1
+            style={{
+              fontFamily: "'Barlow Condensed', sans-serif",
+              fontWeight: 900,
+              fontSize: "clamp(38px, 4.6vw, 72px)",
+              lineHeight: 0.94,
+              letterSpacing: "-0.01em",
+              textTransform: "uppercase",
+              color: "#fff",
+              margin: "0 0 20px 0",
+            }}
+          >
+            TURNING
+            <br />
+            IDEAS INTO
+            <br />
+            SIMPLE
+            <br />
+            EXPERIENCES.
+          </h1>
+          <p
+            style={{
+              fontFamily: "'Barlow Condensed', sans-serif",
+              fontWeight: 500,
+              fontSize: "12px",
+              letterSpacing: "0.08em",
+              lineHeight: 1.6,
+              color: "rgba(255,255,255,0.75)",
+              textTransform: "uppercase",
+              maxWidth: "240px",
+            }}
+          >
+            UI/UX DESIGNER
+            <br />
+            FOCUSED ON CREATING
+            <br />
+            SIMPLE & USER-FRIENDLY
+            <br />
+            DIGITAL EXPERIENCES.
+          </p>
+        </div>
 
-        {/* Hero Content */}
+        {/* ── CỘT GIỮA: ẢNH CHÂN DUNG & HÀO QUANG ────── */}
         <div
           style={{
             position: "relative",
-            flex: 1,
-            display: "grid",
-            gridTemplateColumns: "1fr 1fr 1fr",
-            alignItems: "center",
-            padding: "0 48px",
-            paddingBottom: "60px",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "flex-start",
+            paddingTop: "20px",
+            height: "100%",
+            zIndex: 1,
           }}
         >
-          <div style={{ zIndex: 2 }}>
-            <h1
-              style={{
-                fontFamily: "'Barlow Condensed', sans-serif",
-                fontWeight: 900,
-                fontSize: "clamp(54px, 7.5vw, 100px)",
-                lineHeight: 0.92,
-                letterSpacing: "-0.01em",
-                textTransform: "uppercase",
-                color: "#fff",
-                margin: "0 0 28px 0",
-              }}
-            >
-              TURNING
-              <br />
-              IDEAS INTO
-              <br />
-              SIMPLE
-              <br />
-              EXPERIENCES.
-            </h1>
-            <p
-              style={{
-                fontFamily: "'Barlow Condensed', sans-serif",
-                fontWeight: 400,
-                fontSize: "12px",
-                letterSpacing: "0.06em",
-                lineHeight: 1.6,
-                color: "rgba(255,255,255,0.75)",
-                textTransform: "uppercase",
-                maxWidth: "240px",
-              }}
-            >
-              UI/UX DESIGNER
-              <br />
-              FOCUSED ON CREATING
-              <br />
-              SIMPLE & USER-FRIENDLY
-              <br />
-              DIGITAL EXPERIENCES.
-            </p>
-          </div>
-
+          {/* Hào quang lớp ngoài (Radiant Ambient Aura) */}
           <div
             style={{
+              position: "absolute",
+              top: "10px",
+              left: "50%",
+              transform: "translateX(-50%)",
+              width: "480px",
+              height: "480px",
+              borderRadius: "50%",
+              background:
+                "radial-gradient(circle, rgba(34, 197, 94, 0.45) 0%, rgba(74, 222, 128, 0.2) 45%, transparent 75%)",
+              filter: "blur(60px)",
+              pointerEvents: "none",
+              zIndex: 0,
+            }}
+          />
+
+          {/* Hào quang tâm sáng (Core Bright Glow) */}
+          <div
+            style={{
+              position: "absolute",
+              top: "30px",
+              left: "50%",
+              transform: "translateX(-50%)",
+              width: "340px",
+              height: "380px",
+              borderRadius: "50%",
+              background:
+                "radial-gradient(ellipse at center, rgba(255, 255, 255, 0.28) 0%, rgba(34, 197, 94, 0.45) 50%, transparent 75%)",
+              filter: "blur(35px)",
+              pointerEvents: "none",
+              zIndex: 0,
+            }}
+          />
+
+          {/* Ảnh chân dung (vừa vặn màn hình 1st screen) */}
+          <img
+            src={heroAvatarImg}
+            alt="CRTOAN — UI/UX Designer"
+            style={{
               position: "relative",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "flex-end",
               zIndex: 1,
-              marginTop: "-70px",
-              marginBottom: "-20px",
+              width: "100%",
+              maxWidth: "460px",
+              maxHeight: "calc(100vh - 240px)",
+              height: "auto",
+              objectFit: "contain",
+              objectPosition: "center top",
+              display: "block",
+              filter:
+                "drop-shadow(0 0 35px rgba(34, 197, 94, 0.4)) drop-shadow(0 25px 45px rgba(0,0,0,0.7))",
+              maskImage:
+                "linear-gradient(to bottom, black 82%, transparent 100%)",
+              WebkitMaskImage:
+                "linear-gradient(to bottom, black 82%, transparent 100%)",
+            }}
+          />
+        </div>
+
+        {/* ── CỘT PHẢI: BIO & CTA BUTTON ─────────────── */}
+        <div
+          style={{
+            paddingTop: "20px",
+            paddingLeft: "24px",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "flex-start",
+            zIndex: 2,
+          }}
+        >
+          <p
+            style={{
+              fontFamily: "'Barlow Condensed', sans-serif",
+              fontWeight: 700,
+              fontSize: "clamp(16px, 1.8vw, 22px)",
+              lineHeight: 1.35,
+              letterSpacing: "0.04em",
+              textTransform: "uppercase",
+              color: "#fff",
+              marginBottom: "28px",
+              maxWidth: "340px",
             }}
           >
-            {/* Hào quang lớp ngoài tỏa rộng (Wide Radiant Aura) */}
-            <div
-              style={{
-                position: "absolute",
-                top: "5%",
-                left: "50%",
-                transform: "translateX(-50%)",
-                width: "650px",
-                height: "650px",
-                borderRadius: "50%",
-                background:
-                  "radial-gradient(circle, rgba(34, 197, 94, 0.5) 0%, rgba(74, 222, 128, 0.25) 45%, transparent 75%)",
-                filter: "blur(70px)",
-                pointerEvents: "none",
-                zIndex: 0,
-              }}
-            />
-
-            {/* Hào quang tâm sáng (Core Bright Aura behind figure) */}
-            <div
-              style={{
-                position: "absolute",
-                top: "10%",
-                left: "50%",
-                transform: "translateX(-50%)",
-                width: "450px",
-                height: "500px",
-                borderRadius: "50%",
-                background:
-                  "radial-gradient(ellipse at center, rgba(255, 255, 255, 0.3) 0%, rgba(34, 197, 94, 0.5) 50%, transparent 75%)",
-                filter: "blur(40px)",
-                pointerEvents: "none",
-                zIndex: 0,
-              }}
-            />
-
-            {/* Ảnh chân dung (kích thước siêu lớn & cực kỳ nổi bật) */}
-            <img
-              src={heroAvatarImg}
-              alt="CRTOAN — UI/UX Designer"
-              style={{
-                position: "relative",
-                zIndex: 1,
-                width: "100%",
-                maxWidth: "680px",
-                height: "780px",
-                objectFit: "contain",
-                objectPosition: "center bottom",
-                display: "block",
-                filter:
-                  "drop-shadow(0 0 45px rgba(34, 197, 94, 0.45)) drop-shadow(0 30px 60px rgba(0,0,0,0.75))",
-                maskImage:
-                  "linear-gradient(to bottom, black 85%, transparent 100%)",
-                WebkitMaskImage:
-                  "linear-gradient(to bottom, black 85%, transparent 100%)",
-              }}
-            />
-          </div>
-
-          <div style={{ zIndex: 2, paddingLeft: "24px" }}>
-            <p
-              style={{
-                fontFamily: "'Barlow Condensed', sans-serif",
-                fontWeight: 700,
-                fontSize: "clamp(18px, 2.2vw, 24px)",
-                lineHeight: 1.35,
-                letterSpacing: "0.04em",
-                textTransform: "uppercase",
-                color: "#fff",
-                marginBottom: "36px",
-                maxWidth: "380px",
-              }}
-            >
-              I'M A UI/UX DESIGNER WITH A BACKGROUND IN IT.
-              <br />
-              I ENJOY TURNING COMPLEX PROBLEMS
-              <br />
-              INTO SIMPLE DIGITAL EXPERIENCES.
-            </p>
-            <button
-              onClick={() => onNavigate("works")}
-              style={{
-                background: "#fff",
-                color: "#010d04",
-                border: "none",
-                borderRadius: "100px",
-                padding: "16px 40px",
-                fontFamily: "'Barlow Condensed', sans-serif",
-                fontWeight: 700,
-                fontSize: "14px",
-                letterSpacing: "0.12em",
-                textTransform: "uppercase",
-                cursor: "pointer",
-                transition: "background 0.2s, transform 0.15s",
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.background = "#f0f0f0";
-                e.currentTarget.style.transform = "scale(1.03)";
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.background = "#fff";
-                e.currentTarget.style.transform = "scale(1)";
-              }}
-            >
-              VIEW PROJECTS
-            </button>
-          </div>
+            I'M A UI/UX DESIGNER WITH A BACKGROUND IN IT.
+            <br />
+            I ENJOY TURNING COMPLEX PROBLEMS
+            <br />
+            INTO SIMPLE DIGITAL EXPERIENCES.
+          </p>
+          <button
+            onClick={() => onNavigate("works")}
+            style={{
+              background: "#fff",
+              color: "#010d04",
+              border: "none",
+              borderRadius: "100px",
+              padding: "16px 40px",
+              fontFamily: "'Barlow Condensed', sans-serif",
+              fontWeight: 700,
+              fontSize: "14px",
+              letterSpacing: "0.12em",
+              textTransform: "uppercase",
+              cursor: "pointer",
+              transition: "background 0.2s, transform 0.15s",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.background = "#f0f0f0";
+              e.currentTarget.style.transform = "scale(1.03)";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.background = "#fff";
+              e.currentTarget.style.transform = "scale(1)";
+            }}
+          >
+            VIEW PROJECTS
+          </button>
         </div>
       </div>
 
-      {/* CRTOAN Banner */}
+      {/* ── 3. CRTOAN BANNER & SERVICES FOOTER ───────── */}
       <div
         style={{
           background: "transparent",
           padding: "0",
           overflow: "hidden",
-          marginTop: "-180px",
           position: "relative",
-          zIndex: 2,
+          zIndex: 3,
+          marginTop: "-90px",
         }}
       >
-        <div style={{ lineHeight: 0.85, overflow: "hidden", paddingTop: "16px" }}>
+        <div style={{ lineHeight: 0.8, overflow: "hidden" }}>
           <span
             style={{
               display: "block",
               fontFamily: "'Barlow Condensed', sans-serif",
               fontWeight: 900,
-              fontSize: "clamp(80px, 20vw, 240px)",
+              fontSize: "clamp(70px, 17vw, 220px)",
               letterSpacing: "-0.02em",
               textTransform: "uppercase",
-              color: "#fff",
+              color: "#ffffff",
               whiteSpace: "nowrap",
               textAlign: "center",
               userSelect: "none",
@@ -240,8 +257,10 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           style={{
             display: "flex",
             justifyContent: "space-between",
-            padding: "16px 48px 24px",
+            padding: "12px 48px 16px",
             borderTop: "1px solid rgba(255,255,255,0.08)",
+            background: "rgba(1, 13, 4, 0.4)",
+            backdropFilter: "blur(8px)",
           }}
         >
           {servicesBar.map((s) => (
@@ -261,6 +280,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           ))}
         </div>
       </div>
+    </div>
     </>
   );
 };
