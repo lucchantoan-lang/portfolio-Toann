@@ -215,8 +215,7 @@ export const AboutMeSection: React.FC = () => {
             position: "relative",
             borderRadius: "24px",
             overflow: "hidden",
-            aspectRatio: "3/4",
-            maxHeight: "560px",
+            aspectRatio: "1024 / 577",
             boxShadow:
               "0 28px 60px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,255,255,0.1)",
           }}
@@ -228,17 +227,7 @@ export const AboutMeSection: React.FC = () => {
               width: "100%",
               height: "100%",
               objectFit: "cover",
-              objectPosition: "center top",
               display: "block",
-            }}
-          />
-          {/* Gradient overlay nhẹ ở chân ảnh */}
-          <div
-            style={{
-              position: "absolute",
-              inset: 0,
-              background:
-                "linear-gradient(to top, rgba(2,14,5,0.4) 0%, transparent 40%)",
             }}
           />
         </div>
