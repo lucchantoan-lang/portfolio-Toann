@@ -1,6 +1,7 @@
 import { NavItem, ServiceItem, ProjectItem, TeamMember, StatItem } from "./types";
 import hdbankImg from "../imports/hdbank-di-cmb.png";
 import tiktokImg from "../imports/tiktok-shop-summit.png";
+import internhubImg from "../imports/internhub-fpt.png";
 
 export const NAV_ITEMS: NavItem[] = ["WORKS", "ABOUT", "SKILLS", "RESUME", "CONTACT"];
 
@@ -75,12 +76,12 @@ export const PROJECTS_LIST: ProjectItem[] = [
   },
   {
     num: "03",
-    title: "NOVA — INTERACTIVE PLATFORM",
-    category: "Web App & Interaction Design",
+    title: "INTERNHUB FPT",
+    category: "Web & Mobile App · HR Tech",
     year: "2025",
-    desc: "Nền tảng kỹ thuật số tương tác cao với giao diện người dùng trực quan, tập trung vào trải nghiệm mượt mà và tối ưu hóa luồng hành vi khách hàng.",
-    tags: ["User Flow", "Interaction", "Prototyping", "Wireframe"],
-    img: "https://images.unsplash.com/photo-1612544409025-e1f6a56c1152?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&w=900&h=600&q=80",
+    desc: "Nền tảng ứng dụng dành cho thực tập sinh FPT giúp tối ưu quy trình check-in/check-out hàng ngày, theo dõi lịch làm việc trực quan, quản lý thời gian hiệu quả và tạo các phiếu xin nghỉ phép, phiếu yêu cầu một cách nhanh chóng, tiện lợi.",
+    tags: ["UI/UX Design", "Mobile App", "Design System", "HR Tech", "User Flow"],
+    img: internhubImg,
     wide: true,
   },
   {
