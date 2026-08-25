@@ -1,6 +1,61 @@
 import React from "react";
 import avatarImg from "../../imports/avatar.jpg";
 
+const uiSkills = [
+  "UI Design",
+  "Wireframing",
+  "Prototyping",
+  "Design System",
+  "Visual Design",
+];
+
+const uxSkills = [
+  "UX Research",
+  "User Flow",
+  "Usability Testing",
+  "Information Architecture",
+  "User Journey Mapping",
+];
+
+const tools = ["Figma", "FigJam", "Photoshop", "Framer", "Blender"];
+
+const facts = [
+  { num: "1+", label: "Year of experience" },
+  { num: "4+", label: "Projects completed" },
+];
+
+const pillStyle: React.CSSProperties = {
+  fontFamily: "'Barlow Condensed', sans-serif",
+  fontSize: "12px",
+  fontWeight: 700,
+  letterSpacing: "0.06em",
+  textTransform: "uppercase",
+  color: "#ffffff",
+  background: "rgba(255,255,255,0.06)",
+  border: "1px solid rgba(255,255,255,0.18)",
+  borderRadius: "100px",
+  padding: "8px 18px",
+  whiteSpace: "nowrap",
+};
+
+const cardStyle: React.CSSProperties = {
+  background: "linear-gradient(135deg, #082010 0%, #041408 100%)",
+  border: "1px solid rgba(255,255,255,0.12)",
+  borderRadius: "20px",
+  padding: "32px",
+  boxShadow: "0 20px 50px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.08)",
+};
+
+const cardLabelStyle: React.CSSProperties = {
+  fontFamily: "'Barlow Condensed', sans-serif",
+  fontSize: "12px",
+  letterSpacing: "0.2em",
+  color: "#22c55e",
+  textTransform: "uppercase",
+  fontWeight: 700,
+  marginBottom: "18px",
+};
+
 export const AboutMeSection: React.FC = () => {
   return (
     <section
@@ -11,14 +66,14 @@ export const AboutMeSection: React.FC = () => {
         position: "relative",
       }}
     >
+      {/* ── ROW 1: BIO (LEFT) + ẢNH (RIGHT) ────────────────────── */}
       <div
         style={{
-          maxWidth: "1400px",
-          margin: "0 auto",
           display: "grid",
           gridTemplateColumns: "1fr 1fr",
           gap: "80px",
           alignItems: "center",
+          marginBottom: "72px",
         }}
       >
         {/* ── CỘT TRÁI: TEXT & STATS ───────────────────── */}
@@ -64,7 +119,7 @@ export const AboutMeSection: React.FC = () => {
               color: "rgba(255,255,255,0.65)",
               lineHeight: 1.85,
               marginBottom: "24px",
-              maxWidth: "540px",
+              maxWidth: "560px",
             }}
           >
             Hi, I'm <strong style={{ color: "#fff" }}>Toan</strong> — a UI/UX Designer with
@@ -79,7 +134,7 @@ export const AboutMeSection: React.FC = () => {
               color: "rgba(255,255,255,0.65)",
               lineHeight: 1.85,
               marginBottom: "48px",
-              maxWidth: "540px",
+              maxWidth: "560px",
             }}
           >
             My design process starts with understanding users, their needs, and their
@@ -93,7 +148,7 @@ export const AboutMeSection: React.FC = () => {
               display: "grid",
               gridTemplateColumns: "1fr 1fr",
               gap: "48px",
-              maxWidth: "400px",
+              maxWidth: "420px",
             }}
           >
             <div>
@@ -107,7 +162,7 @@ export const AboutMeSection: React.FC = () => {
                   letterSpacing: "-0.02em",
                 }}
               >
-                1+
+                {facts[0].num}
               </div>
               <div
                 style={{
@@ -120,7 +175,7 @@ export const AboutMeSection: React.FC = () => {
                   fontWeight: 700,
                 }}
               >
-                YEARS OF EXPERIENCE
+                {facts[0].label}
               </div>
             </div>
 
@@ -135,7 +190,7 @@ export const AboutMeSection: React.FC = () => {
                   letterSpacing: "-0.02em",
                 }}
               >
-                4+
+                {facts[1].num}
               </div>
               <div
                 style={{
@@ -148,7 +203,7 @@ export const AboutMeSection: React.FC = () => {
                   fontWeight: 700,
                 }}
               >
-                PROJECTS COMPLETED
+                {facts[1].label}
               </div>
             </div>
           </div>
@@ -168,7 +223,7 @@ export const AboutMeSection: React.FC = () => {
             }}
           />
 
-          {/* Badge EST. 2024 xanh neon góc dưới trái */}
+          {/* Badge EST. 2024 */}
           <div
             style={{
               position: "absolute",
@@ -203,6 +258,52 @@ export const AboutMeSection: React.FC = () => {
             >
               2024
             </div>
+          </div>
+        </div>
+      </div>
+
+      {/* ── ROW 2: BỐ CỤC SKILLS NẰM NGANG (UI SKILLS | UX SKILLS | TOOLS) ── */}
+      <div
+        id="skills"
+        style={{
+          display: "grid",
+          gridTemplateColumns: "1fr 1fr 1fr",
+          gap: "24px",
+        }}
+      >
+        {/* UI Skills */}
+        <div style={cardStyle}>
+          <div style={cardLabelStyle}>UI Skills</div>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: "8px" }}>
+            {uiSkills.map((s) => (
+              <span key={s} style={pillStyle}>
+                {s}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        {/* UX Skills */}
+        <div style={cardStyle}>
+          <div style={cardLabelStyle}>UX Skills</div>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: "8px" }}>
+            {uxSkills.map((s) => (
+              <span key={s} style={pillStyle}>
+                {s}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        {/* Tools I Use */}
+        <div style={cardStyle}>
+          <div style={cardLabelStyle}>Tools I Use</div>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: "8px" }}>
+            {tools.map((s) => (
+              <span key={s} style={pillStyle}>
+                {s}
+              </span>
+            ))}
           </div>
         </div>
       </div>
