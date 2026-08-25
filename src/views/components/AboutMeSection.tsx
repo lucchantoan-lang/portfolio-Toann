@@ -22,6 +22,7 @@ const tools = ["Figma", "FigJam", "Photoshop", "Framer", "Blender"];
 const facts = [
   { num: "1+", label: "Year of experience" },
   { num: "4+", label: "Projects completed" },
+  { num: "5+", label: "Happy clients" },
 ];
 
 const pillStyle: React.CSSProperties = {
@@ -144,71 +145,45 @@ export const AboutMeSection: React.FC = () => {
             </p>
           </div>
 
-          {/* Stats 2 cột */}
+          {/* Stats 3 cột */}
           <div
             style={{
               display: "grid",
-              gridTemplateColumns: "1fr 1fr",
-              gap: "36px",
+              gridTemplateColumns: "repeat(3, 1fr)",
+              gap: "24px",
               paddingTop: "24px",
               borderTop: "1px solid rgba(255,255,255,0.08)",
             }}
           >
-            <div>
-              <div
-                style={{
-                  fontFamily: "'Barlow Condensed', sans-serif",
-                  fontWeight: 900,
-                  fontSize: "52px",
-                  lineHeight: 1,
-                  color: "#ffffff",
-                  letterSpacing: "-0.02em",
-                }}
-              >
-                {facts[0].num}
+            {facts.map(({ num, label }) => (
+              <div key={label}>
+                <div
+                  style={{
+                    fontFamily: "'Barlow Condensed', sans-serif",
+                    fontWeight: 900,
+                    fontSize: "52px",
+                    lineHeight: 1,
+                    color: "#22c55e",
+                    letterSpacing: "-0.02em",
+                  }}
+                >
+                  {num}
+                </div>
+                <div
+                  style={{
+                    fontFamily: "'Barlow Condensed', sans-serif",
+                    fontSize: "11px",
+                    letterSpacing: "0.15em",
+                    color: "rgba(255,255,255,0.45)",
+                    textTransform: "uppercase",
+                    marginTop: "8px",
+                    fontWeight: 700,
+                  }}
+                >
+                  {label}
+                </div>
               </div>
-              <div
-                style={{
-                  fontFamily: "'Barlow Condensed', sans-serif",
-                  fontSize: "11px",
-                  letterSpacing: "0.15em",
-                  color: "rgba(255,255,255,0.45)",
-                  textTransform: "uppercase",
-                  marginTop: "8px",
-                  fontWeight: 700,
-                }}
-              >
-                {facts[0].label}
-              </div>
-            </div>
-
-            <div>
-              <div
-                style={{
-                  fontFamily: "'Barlow Condensed', sans-serif",
-                  fontWeight: 900,
-                  fontSize: "52px",
-                  lineHeight: 1,
-                  color: "#ffffff",
-                  letterSpacing: "-0.02em",
-                }}
-              >
-                {facts[1].num}
-              </div>
-              <div
-                style={{
-                  fontFamily: "'Barlow Condensed', sans-serif",
-                  fontSize: "11px",
-                  letterSpacing: "0.15em",
-                  color: "rgba(255,255,255,0.45)",
-                  textTransform: "uppercase",
-                  marginTop: "8px",
-                  fontWeight: 700,
-                }}
-              >
-                {facts[1].label}
-              </div>
-            </div>
+            ))}
           </div>
         </div>
 
