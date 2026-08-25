@@ -265,7 +265,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
                 position: "relative",
                 borderRadius: "16px",
                 overflow: "hidden",
-                aspectRatio: "16/10",
+                aspectRatio: "16/9",
                 boxShadow: "0 20px 45px rgba(0,0,0,0.6)",
                 border: "1px solid rgba(255,255,255,0.15)",
                 cursor: "pointer",
@@ -278,9 +278,10 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
                   width: "100%",
                   height: "100%",
                   objectFit: "cover",
+                  objectPosition: "center center",
                   display: "block",
-                  transition: "transform 0.7s cubic-bezier(0.16, 1, 0.3, 1)",
-                  transform: hoveredProject === i ? "scale(1.04)" : "scale(1)",
+                  transition: "transform 0.6s cubic-bezier(0.16, 1, 0.3, 1)",
+                  transform: hoveredProject === i ? "scale(1.02)" : "scale(1)",
                 }}
               />
               <div
