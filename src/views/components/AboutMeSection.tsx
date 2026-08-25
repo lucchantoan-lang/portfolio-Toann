@@ -95,21 +95,17 @@ export const AboutMeSection: React.FC = () => {
             style={{
               fontFamily: "'Barlow Condensed', sans-serif",
               fontWeight: 900,
-              fontSize: "clamp(42px, 4.5vw, 72px)",
-              lineHeight: 0.95,
+              fontSize: "clamp(38px, 4.2vw, 68px)",
+              lineHeight: 0.98,
               textTransform: "uppercase",
               margin: "16px 0 32px 0",
-              letterSpacing: "-0.02em",
+              letterSpacing: "-0.01em",
               color: "#ffffff",
             }}
           >
-            I DESIGN
+            I DESIGN SIMPLE DIGITAL
             <br />
-            SIMPLE DIGITAL
-            <br />
-            EXPERIENCES,
-            <br />
-            NOT JUST UI.
+            EXPERIENCES, NOT JUST UI.
           </h2>
 
           <p
