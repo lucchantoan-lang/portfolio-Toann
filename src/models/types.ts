@@ -1,4 +1,4 @@
-export type NavItem = "PROJECTS" | "SERVICES" | "TEAM" | "ABOUT" | "CONTACTS" | string;
+export type NavItem = "WORKS" | "ABOUT" | "SKILLS" | "RESUME" | "CONTACT" | string;
 
 export interface ServiceItem {
   num: string;

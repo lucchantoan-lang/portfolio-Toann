@@ -1,7 +1,7 @@
 import { NavItem, ServiceItem, ProjectItem, TeamMember, StatItem } from "./types";
 import hdbankImg from "../imports/hdbank-di-cmb.png";
 
-export const NAV_ITEMS: NavItem[] = ["PROJECTS", "SERVICES", "TEAM", "ABOUT", "CONTACTS"];
+export const NAV_ITEMS: NavItem[] = ["WORKS", "ABOUT", "SKILLS", "RESUME", "CONTACT"];
 
 export const SERVICES_BAR: string[] = [
   "BRANDING & DESIGN",

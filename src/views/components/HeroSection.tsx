@@ -138,7 +138,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               DIGITAL EXPERIENCES.
             </p>
             <button
-              onClick={() => onNavigate("projects")}
+              onClick={() => onNavigate("works")}
               style={{
                 background: "#fff",
                 color: "#010d04",
@@ -162,7 +162,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                 e.currentTarget.style.transform = "scale(1)";
               }}
             >
-              START YOUR PROJECT
+              VIEW PROJECTS.
             </button>
           </div>
         </div>
