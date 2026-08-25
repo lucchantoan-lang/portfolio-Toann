@@ -2,6 +2,7 @@ import { NavItem, ServiceItem, ProjectItem, TeamMember, StatItem } from "./types
 import hdbankImg from "../imports/hdbank-di-cmb.png";
 import tiktokImg from "../imports/tiktok-shop-summit.png";
 import internhubImg from "../imports/internhub-fpt.png";
+import nepNhaImg from "../imports/nep-nha.png";
 
 export const NAV_ITEMS: NavItem[] = ["WORKS", "ABOUT", "SKILLS", "RESUME", "CONTACT"];
 
@@ -86,12 +87,12 @@ export const PROJECTS_LIST: ProjectItem[] = [
   },
   {
     num: "04",
-    title: "CREST — ANALYTICS DASHBOARD",
-    category: "SaaS & Dashboard Interface",
-    year: "2024",
-    desc: "Bảng điều khiển quản lý và trực quan hóa dữ liệu kinh doanh phức tạp thành các biểu đồ và thao tác đơn giản, dễ tiếp cận cho người dùng doanh nghiệp.",
-    tags: ["Dashboard UI", "SaaS", "User Research", "Data Viz"],
-    img: "https://images.unsplash.com/photo-1577190651915-bf62d54d5b36?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&w=900&h=600&q=80",
+    title: "NẾP NHÀ",
+    category: "Mobile App & UI/UX Design",
+    year: "2026",
+    desc: "Giao diện và hệ thống thiết kế cho ứng dụng gắn kết gia đình đa thế hệ — nơi lưu giữ kỷ niệm, chia sẻ khoảnh khắc sum vầy và duy trì các hoạt động chung ý nghĩa giữa các thành viên.",
+    tags: ["UI/UX Design", "Design System", "Mobile App", "Family App", "Case Study"],
+    img: nepNhaImg,
     wide: true,
   },
 ];
