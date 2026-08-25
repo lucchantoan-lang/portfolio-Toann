@@ -166,7 +166,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           background: "transparent",
           padding: "0",
           overflow: "hidden",
-          marginTop: "-260px",
+          marginTop: "-180px",
           position: "relative",
           zIndex: 2,
         }}
@@ -177,7 +177,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               display: "block",
               fontFamily: "'Barlow Condensed', sans-serif",
               fontWeight: 900,
-              fontSize: "clamp(100px, 20vw, 320px)",
+              fontSize: "clamp(70px, 14vw, 220px)",
               letterSpacing: "-0.02em",
               textTransform: "uppercase",
               color: "#fff",
