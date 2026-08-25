@@ -148,64 +148,72 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           />
         </div>
 
-        {/* ── CỘT PHẢI: BIO & CTA BUTTON CĂN PHẢI ─────── */}
+        {/* ── CỘT PHẢI: BIO & CTA BUTTON ─────── */}
         <div
           style={{
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
-            alignItems: "flex-end",
-            textAlign: "right",
+            alignItems: "flex-start",
+            paddingLeft: "76px",
             zIndex: 2,
           }}
         >
-          <p
+          <div
             style={{
-              fontFamily: "'Barlow Condensed', sans-serif",
-              fontWeight: 700,
-              fontSize: "clamp(18px, 2vw, 24px)",
-              lineHeight: 1.4,
-              letterSpacing: "0.04em",
-              textTransform: "uppercase",
-              color: "#ffffff",
-              marginBottom: "32px",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "flex-end",
               maxWidth: "420px",
-              textAlign: "right",
             }}
           >
-            I'M A UI/UX DESIGNER WITH A BACKGROUND IN IT.
-            <br />
-            I ENJOY TURNING COMPLEX PROBLEMS
-            <br />
-            INTO SIMPLE DIGITAL EXPERIENCES.
-          </p>
-          <button
-            onClick={() => onNavigate("works")}
-            style={{
-              background: "#ffffff",
-              color: "#010d04",
-              border: "none",
-              borderRadius: "100px",
-              padding: "16px 44px",
-              fontFamily: "'Barlow Condensed', sans-serif",
-              fontWeight: 700,
-              fontSize: "14px",
-              letterSpacing: "0.12em",
-              textTransform: "uppercase",
-              cursor: "pointer",
-              transition: "background 0.2s, transform 0.15s",
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.background = "#f0f0f0";
-              e.currentTarget.style.transform = "scale(1.03)";
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.background = "#ffffff";
-              e.currentTarget.style.transform = "scale(1)";
-            }}
-          >
-            VIEW PROJECTS
-          </button>
+            <p
+              style={{
+                fontFamily: "'Barlow Condensed', sans-serif",
+                fontWeight: 700,
+                fontSize: "clamp(18px, 2vw, 24px)",
+                lineHeight: 1.4,
+                letterSpacing: "0.04em",
+                textTransform: "uppercase",
+                color: "#ffffff",
+                marginBottom: "32px",
+                textAlign: "right",
+              }}
+            >
+              I'M A UI/UX DESIGNER WITH A BACKGROUND IN IT.
+              <br />
+              I ENJOY TURNING COMPLEX PROBLEMS
+              <br />
+              INTO SIMPLE DIGITAL EXPERIENCES.
+            </p>
+            <button
+              onClick={() => onNavigate("works")}
+              style={{
+                background: "#ffffff",
+                color: "#010d04",
+                border: "none",
+                borderRadius: "100px",
+                padding: "16px 44px",
+                fontFamily: "'Barlow Condensed', sans-serif",
+                fontWeight: 700,
+                fontSize: "14px",
+                letterSpacing: "0.12em",
+                textTransform: "uppercase",
+                cursor: "pointer",
+                transition: "background 0.2s, transform 0.15s",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.background = "#f0f0f0";
+                e.currentTarget.style.transform = "scale(1.03)";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.background = "#ffffff";
+                e.currentTarget.style.transform = "scale(1)";
+              }}
+            >
+              VIEW PROJECTS
+            </button>
+          </div>
         </div>
       </div>
 
