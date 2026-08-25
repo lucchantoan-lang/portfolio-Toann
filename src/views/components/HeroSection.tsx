@@ -44,7 +44,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           display: "grid",
           gridTemplateColumns: "1.2fr 1fr 1.2fr",
           alignItems: "center",
-          padding: "0 48px",
+          padding: "80px 48px 0",
           zIndex: 2,
         }}
       >
