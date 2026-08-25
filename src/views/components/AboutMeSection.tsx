@@ -70,18 +70,18 @@ export const AboutMeSection: React.FC = () => {
       <div
         style={{
           display: "grid",
-          gridTemplateColumns: "1fr 1fr",
-          gap: "80px",
+          gridTemplateColumns: "1fr 1.25fr",
+          gap: "64px",
           alignItems: "center",
-          marginBottom: "72px",
+          marginBottom: "80px",
         }}
       >
         {/* ── CỘT TRÁI: TEXT & STATS ───────────────────── */}
-        <div>
+        <div style={{ display: "flex", flexDirection: "column", justifyContent: "center" }}>
           <span
             style={{
               fontFamily: "'Barlow Condensed', sans-serif",
-              fontSize: "11px",
+              fontSize: "12px",
               letterSpacing: "0.2em",
               color: "#22c55e",
               textTransform: "uppercase",
@@ -95,10 +95,10 @@ export const AboutMeSection: React.FC = () => {
             style={{
               fontFamily: "'Barlow Condensed', sans-serif",
               fontWeight: 900,
-              fontSize: "clamp(48px, 5.2vw, 84px)",
-              lineHeight: 0.9,
+              fontSize: "clamp(42px, 4.5vw, 72px)",
+              lineHeight: 0.95,
               textTransform: "uppercase",
-              margin: "16px 0 40px 0",
+              margin: "16px 0 32px 0",
               letterSpacing: "-0.02em",
               color: "#ffffff",
             }}
@@ -116,10 +116,9 @@ export const AboutMeSection: React.FC = () => {
             style={{
               fontFamily: "'Barlow', sans-serif",
               fontSize: "15px",
-              color: "rgba(255,255,255,0.65)",
-              lineHeight: 1.85,
-              marginBottom: "24px",
-              maxWidth: "560px",
+              color: "rgba(255,255,255,0.7)",
+              lineHeight: 1.8,
+              marginBottom: "20px",
             }}
           >
             Hi, I'm <strong style={{ color: "#fff" }}>Toan</strong> — a UI/UX Designer with
@@ -131,10 +130,9 @@ export const AboutMeSection: React.FC = () => {
             style={{
               fontFamily: "'Barlow', sans-serif",
               fontSize: "15px",
-              color: "rgba(255,255,255,0.65)",
-              lineHeight: 1.85,
-              marginBottom: "48px",
-              maxWidth: "560px",
+              color: "rgba(255,255,255,0.7)",
+              lineHeight: 1.8,
+              marginBottom: "36px",
             }}
           >
             My design process starts with understanding users, their needs, and their
@@ -147,8 +145,9 @@ export const AboutMeSection: React.FC = () => {
             style={{
               display: "grid",
               gridTemplateColumns: "1fr 1fr",
-              gap: "48px",
-              maxWidth: "420px",
+              gap: "36px",
+              paddingTop: "28px",
+              borderTop: "1px solid rgba(255,255,255,0.08)",
             }}
           >
             <div>
@@ -156,7 +155,7 @@ export const AboutMeSection: React.FC = () => {
                 style={{
                   fontFamily: "'Barlow Condensed', sans-serif",
                   fontWeight: 900,
-                  fontSize: "56px",
+                  fontSize: "52px",
                   lineHeight: 1,
                   color: "#ffffff",
                   letterSpacing: "-0.02em",
@@ -184,7 +183,7 @@ export const AboutMeSection: React.FC = () => {
                 style={{
                   fontFamily: "'Barlow Condensed', sans-serif",
                   fontWeight: 900,
-                  fontSize: "56px",
+                  fontSize: "52px",
                   lineHeight: 1,
                   color: "#ffffff",
                   letterSpacing: "-0.02em",
@@ -209,15 +208,16 @@ export const AboutMeSection: React.FC = () => {
           </div>
         </div>
 
-        {/* ── CỘT PHẢI: ẢNH CHÂN DUNG ─────────────────── */}
+        {/* ── CỘT PHẢI: ẢNH CHÂN DUNG (LỚN & CÂN ĐỐI) ─── */}
         <div
           style={{
             position: "relative",
-            borderRadius: "24px",
+            borderRadius: "28px",
             overflow: "hidden",
-            aspectRatio: "1024 / 577",
+            width: "100%",
+            aspectRatio: "16 / 10.5",
             boxShadow:
-              "0 28px 60px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,255,255,0.1)",
+              "0 32px 70px rgba(0,0,0,0.65), 0 0 0 1px rgba(255,255,255,0.12)",
           }}
         >
           <img
@@ -227,6 +227,7 @@ export const AboutMeSection: React.FC = () => {
               width: "100%",
               height: "100%",
               objectFit: "cover",
+              objectPosition: "center center",
               display: "block",
             }}
           />
