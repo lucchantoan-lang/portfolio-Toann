@@ -13,7 +13,10 @@ export interface ProjectItem {
   category: string;
   year: string;
   img: string;
-  wide: boolean;
+  wide?: boolean;
+  desc?: string;
+  tags?: string[];
+  link?: string;
 }
 
 export interface TeamMember {
