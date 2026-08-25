@@ -91,24 +91,66 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               position: "relative",
               display: "flex",
               justifyContent: "center",
+              alignItems: "flex-end",
               zIndex: 1,
+              marginTop: "-40px",
             }}
           >
+            {/* Hào quang lớp ngoài (Soft Ambient Glow) */}
+            <div
+              style={{
+                position: "absolute",
+                top: "10%",
+                left: "50%",
+                transform: "translateX(-50%)",
+                width: "520px",
+                height: "520px",
+                borderRadius: "50%",
+                background:
+                  "radial-gradient(circle, rgba(34, 197, 94, 0.45) 0%, rgba(74, 222, 128, 0.2) 45%, transparent 75%)",
+                filter: "blur(60px)",
+                pointerEvents: "none",
+                zIndex: 0,
+              }}
+            />
+
+            {/* Hào quang tâm sáng (Core Bright Aura behind head & body) */}
+            <div
+              style={{
+                position: "absolute",
+                top: "15%",
+                left: "50%",
+                transform: "translateX(-50%)",
+                width: "360px",
+                height: "400px",
+                borderRadius: "50%",
+                background:
+                  "radial-gradient(ellipse at center, rgba(255, 255, 255, 0.25) 0%, rgba(34, 197, 94, 0.45) 45%, transparent 75%)",
+                filter: "blur(35px)",
+                pointerEvents: "none",
+                zIndex: 0,
+              }}
+            />
+
+            {/* Ảnh chân dung (kích thước lớn & nổi bật) */}
             <img
               src={heroAvatarImg}
               alt="CRTOAN — UI/UX Designer"
               style={{
+                position: "relative",
+                zIndex: 1,
                 width: "100%",
-                maxWidth: "460px",
-                height: "580px",
+                maxWidth: "540px",
+                height: "670px",
                 objectFit: "contain",
                 objectPosition: "center bottom",
                 display: "block",
-                filter: "drop-shadow(0 20px 40px rgba(0,0,0,0.6))",
+                filter:
+                  "drop-shadow(0 0 35px rgba(34, 197, 94, 0.4)) drop-shadow(0 25px 50px rgba(0,0,0,0.7))",
                 maskImage:
-                  "linear-gradient(to bottom, black 75%, transparent 100%)",
+                  "linear-gradient(to bottom, black 80%, transparent 100%)",
                 WebkitMaskImage:
-                  "linear-gradient(to bottom, black 75%, transparent 100%)",
+                  "linear-gradient(to bottom, black 80%, transparent 100%)",
               }}
             />
           </div>
