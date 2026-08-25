@@ -209,56 +209,38 @@ export const AboutMeSection: React.FC = () => {
           </div>
         </div>
 
-        {/* ── CỘT PHẢI: ẢNH + BADGE XANH LÁ ĐÈ GÓC DƯỚI TRÁI ── */}
-        <div style={{ position: "relative" }}>
+        {/* ── CỘT PHẢI: ẢNH CHÂN DUNG ─────────────────── */}
+        <div
+          style={{
+            position: "relative",
+            borderRadius: "24px",
+            overflow: "hidden",
+            aspectRatio: "3/4",
+            maxHeight: "560px",
+            boxShadow:
+              "0 28px 60px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,255,255,0.1)",
+          }}
+        >
           <img
             src={avatarImg}
             alt="Toan — UI/UX Designer"
             style={{
               width: "100%",
-              height: "620px",
+              height: "100%",
               objectFit: "cover",
-              objectPosition: "center 20%",
+              objectPosition: "center top",
               display: "block",
             }}
           />
-
-          {/* Badge EST. 2024 */}
+          {/* Gradient overlay nhẹ ở chân ảnh */}
           <div
             style={{
               position: "absolute",
-              bottom: "-24px",
-              left: "-24px",
-              background: "#22c55e",
-              padding: "24px 32px",
-              boxShadow: "0 12px 30px rgba(0,0,0,0.5)",
+              inset: 0,
+              background:
+                "linear-gradient(to top, rgba(2,14,5,0.4) 0%, transparent 40%)",
             }}
-          >
-            <div
-              style={{
-                fontFamily: "'Barlow Condensed', sans-serif",
-                fontWeight: 900,
-                fontSize: "36px",
-                lineHeight: 1,
-                color: "#ffffff",
-                letterSpacing: "0.05em",
-              }}
-            >
-              EST.
-            </div>
-            <div
-              style={{
-                fontFamily: "'Barlow Condensed', sans-serif",
-                fontWeight: 900,
-                fontSize: "36px",
-                lineHeight: 1,
-                color: "#ffffff",
-                letterSpacing: "0.05em",
-              }}
-            >
-              2024
-            </div>
-          </div>
+          />
         </div>
       </div>
 
