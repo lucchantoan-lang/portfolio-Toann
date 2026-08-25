@@ -148,14 +148,14 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           />
         </div>
 
-        {/* ── CỘT PHẢI: BIO & CTA BUTTON TRẢI ĐỀU CÂN ĐỐI ─────── */}
+        {/* ── CỘT PHẢI: BIO & CTA BUTTON CĂN PHẢI ─────── */}
         <div
           style={{
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
-            alignItems: "flex-start",
-            paddingLeft: "76px",
+            alignItems: "flex-end",
+            textAlign: "right",
             zIndex: 2,
           }}
         >
@@ -170,6 +170,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               color: "#ffffff",
               marginBottom: "32px",
               maxWidth: "420px",
+              textAlign: "right",
             }}
           >
             I'M A UI/UX DESIGNER WITH A BACKGROUND IN IT.
