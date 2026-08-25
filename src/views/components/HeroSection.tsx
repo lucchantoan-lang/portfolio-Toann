@@ -99,17 +99,16 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               alt="CRTOAN — UI/UX Designer"
               style={{
                 width: "100%",
-                maxWidth: "480px",
-                height: "560px",
-                objectFit: "cover",
-                objectPosition: "center 10%",
+                maxWidth: "460px",
+                height: "580px",
+                objectFit: "contain",
+                objectPosition: "center bottom",
                 display: "block",
+                filter: "drop-shadow(0 20px 40px rgba(0,0,0,0.6))",
                 maskImage:
-                  "linear-gradient(to bottom, transparent 0%, black 12%, black 75%, transparent 100%), linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%)",
+                  "linear-gradient(to bottom, black 75%, transparent 100%)",
                 WebkitMaskImage:
-                  "linear-gradient(to bottom, transparent 0%, black 12%, black 75%, transparent 100%), linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%)",
-                maskComposite: "intersect",
-                WebkitMaskComposite: "source-in",
+                  "linear-gradient(to bottom, black 75%, transparent 100%)",
               }}
             />
           </div>
