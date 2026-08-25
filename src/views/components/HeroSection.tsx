@@ -93,46 +93,47 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               justifyContent: "center",
               alignItems: "flex-end",
               zIndex: 1,
-              marginTop: "-40px",
+              marginTop: "-70px",
+              marginBottom: "-20px",
             }}
           >
-            {/* Hào quang lớp ngoài (Soft Ambient Glow) */}
+            {/* Hào quang lớp ngoài tỏa rộng (Wide Radiant Aura) */}
+            <div
+              style={{
+                position: "absolute",
+                top: "5%",
+                left: "50%",
+                transform: "translateX(-50%)",
+                width: "650px",
+                height: "650px",
+                borderRadius: "50%",
+                background:
+                  "radial-gradient(circle, rgba(34, 197, 94, 0.5) 0%, rgba(74, 222, 128, 0.25) 45%, transparent 75%)",
+                filter: "blur(70px)",
+                pointerEvents: "none",
+                zIndex: 0,
+              }}
+            />
+
+            {/* Hào quang tâm sáng (Core Bright Aura behind figure) */}
             <div
               style={{
                 position: "absolute",
                 top: "10%",
                 left: "50%",
                 transform: "translateX(-50%)",
-                width: "520px",
-                height: "520px",
+                width: "450px",
+                height: "500px",
                 borderRadius: "50%",
                 background:
-                  "radial-gradient(circle, rgba(34, 197, 94, 0.45) 0%, rgba(74, 222, 128, 0.2) 45%, transparent 75%)",
-                filter: "blur(60px)",
+                  "radial-gradient(ellipse at center, rgba(255, 255, 255, 0.3) 0%, rgba(34, 197, 94, 0.5) 50%, transparent 75%)",
+                filter: "blur(40px)",
                 pointerEvents: "none",
                 zIndex: 0,
               }}
             />
 
-            {/* Hào quang tâm sáng (Core Bright Aura behind head & body) */}
-            <div
-              style={{
-                position: "absolute",
-                top: "15%",
-                left: "50%",
-                transform: "translateX(-50%)",
-                width: "360px",
-                height: "400px",
-                borderRadius: "50%",
-                background:
-                  "radial-gradient(ellipse at center, rgba(255, 255, 255, 0.25) 0%, rgba(34, 197, 94, 0.45) 45%, transparent 75%)",
-                filter: "blur(35px)",
-                pointerEvents: "none",
-                zIndex: 0,
-              }}
-            />
-
-            {/* Ảnh chân dung (kích thước lớn & nổi bật) */}
+            {/* Ảnh chân dung (kích thước siêu lớn & cực kỳ nổi bật) */}
             <img
               src={heroAvatarImg}
               alt="CRTOAN — UI/UX Designer"
@@ -140,17 +141,17 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                 position: "relative",
                 zIndex: 1,
                 width: "100%",
-                maxWidth: "540px",
-                height: "670px",
+                maxWidth: "680px",
+                height: "780px",
                 objectFit: "contain",
                 objectPosition: "center bottom",
                 display: "block",
                 filter:
-                  "drop-shadow(0 0 35px rgba(34, 197, 94, 0.4)) drop-shadow(0 25px 50px rgba(0,0,0,0.7))",
+                  "drop-shadow(0 0 45px rgba(34, 197, 94, 0.45)) drop-shadow(0 30px 60px rgba(0,0,0,0.75))",
                 maskImage:
-                  "linear-gradient(to bottom, black 80%, transparent 100%)",
+                  "linear-gradient(to bottom, black 85%, transparent 100%)",
                 WebkitMaskImage:
-                  "linear-gradient(to bottom, black 80%, transparent 100%)",
+                  "linear-gradient(to bottom, black 85%, transparent 100%)",
               }}
             />
           </div>
