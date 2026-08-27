@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import imgAsset from "../imports/nep-nha.png";
 
 export const NepNhaCaseStudyView: React.FC = () => {
   const navigate = useNavigate();
@@ -8,10 +9,10 @@ export const NepNhaCaseStudyView: React.FC = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  const imgHero = "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/224441b7-776f-4e3d-b7e6-e22599309b78";
-  const imgCalendar = "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/e624f954-44f2-4279-9f3a-55b7a4b6a865";
-  const imgTasks = "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/210c2e48-e0ef-4269-b0cd-e61bd8a70500";
-  const imgHealth = "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/70a076d9-14a4-4b52-bca0-8ee889a1aa65";
+  const imgHero = imgAsset;
+  const imgCalendar = imgAsset;
+  const imgTasks = imgAsset;
+  const imgHealth = imgAsset;
 
   return (
     <div className="min-h-screen bg-[#f4f0ea] text-[#3b2c21] font-serif overflow-x-hidden relative">

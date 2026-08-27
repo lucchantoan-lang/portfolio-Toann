@@ -8,6 +8,11 @@ import imgDesktop4 from "../imports/tiktok/desktop4.png";
 import imgDesktop5 from "../imports/tiktok/desktop5.png";
 import imgDesktop6 from "../imports/tiktok/desktop6.png";
 
+import imgHomepageAsset from "../imports/tiktok/asset1.png";
+import imgScheduleAsset from "../imports/tiktok/asset2.png";
+import imgVendorsAsset from "../imports/tiktok/asset3.png";
+import imgMapAsset from "../imports/tiktok/asset4.png";
+
 export const TiktokSummitCaseStudyView: React.FC = () => {
   const navigate = useNavigate();
 
@@ -15,10 +20,10 @@ export const TiktokSummitCaseStudyView: React.FC = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  const imgHomepage = "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/855a90a2-4df6-4e20-9d85-c1c4ef589331";
-  const imgSchedule = "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/932ae5d9-b94b-49e4-bf2a-2074b6fa2017";
-  const imgVendors = "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/d1b30e23-b287-45cc-bbac-6c8c54f30cba";
-  const imgMap = "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/bc2e7d7b-b134-4768-9eba-0412230e9770";
+  const imgHomepage = imgHomepageAsset;
+  const imgSchedule = imgScheduleAsset;
+  const imgVendors = imgVendorsAsset;
+  const imgMap = imgMapAsset;
 
   return (
     <div className="min-h-screen bg-[#f4f0ea] text-[#3b2c21] font-serif overflow-x-hidden relative">
