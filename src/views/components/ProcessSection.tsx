@@ -31,13 +31,13 @@ export const ProcessSection: React.FC = () => {
   return (
     <section id="process" className="py-32 px-6 md:px-12 max-w-7xl mx-auto relative overflow-hidden">
       <div className="flex flex-col items-center mb-32 relative z-10">
-        <h2 className="font-['Great_Vibes'] text-6xl md:text-[100px] text-[#543f32] leading-[0.5] font-normal drop-shadow-sm -rotate-2">
+        <h2 className="font-['Great_Vibes'] text-6xl md:text-[100px] text-[#efe8de] leading-[0.5] font-normal drop-shadow-md -rotate-2">
           Design
         </h2>
-        <h3 className="font-['Playfair_Display'] text-4xl md:text-[60px] text-[#3b2c21] font-black uppercase tracking-[0.2em] mt-4 drop-shadow-sm">
+        <h3 className="font-['Playfair_Display'] text-4xl md:text-[60px] text-[#e3cdba] font-black uppercase tracking-[0.2em] mt-4 drop-shadow-lg">
           Process
         </h3>
-        <p className="font-serif text-sm md:text-base text-[#543f32]/80 max-w-md text-center mt-6 italic">
+        <p className="font-serif text-base md:text-lg text-[#efe8de]/90 max-w-md text-center mt-6 italic">
           A structured approach to solving complex problems and delivering simple, intuitive digital experiences.
         </p>
       </div>

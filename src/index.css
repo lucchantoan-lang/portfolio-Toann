@@ -8,7 +8,7 @@
   --color-ink: #543f32; /* Dark brown ink for text on paper */
   --font-display: 'Playfair Display', serif;
   --font-script: 'Great Vibes', cursive;
-  --font-body: 'Lora', serif;
+  --font-serif: 'Lora', serif;
 }
 
 * {

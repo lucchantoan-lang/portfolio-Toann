@@ -56,7 +56,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
             <div className="relative w-full bg-[#e3cdba] paper-shadow rounded-sm z-20 flex flex-col md:flex-row border-t border-l border-white/40">
               
               {/* Left Col: Info */}
-              <div className="flex-1 p-8 md:p-12 flex flex-col justify-between">
+              <div className="flex-[1.2] p-8 md:p-14 lg:p-16 lg:pr-20 flex flex-col justify-between">
                 <div>
                   <div className="flex justify-between items-start mb-2">
                     <div className="font-['Great_Vibes'] text-3xl md:text-4xl text-[#543f32]">
@@ -72,7 +72,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
                   </h3>
                   
                   {p.desc && (
-                    <p className="font-serif text-sm md:text-base text-[#543f32]/90 leading-relaxed mb-8">
+                    <p className="font-serif text-base md:text-lg lg:text-xl text-[#543f32]/90 leading-relaxed mb-8">
                       {p.desc}
                     </p>
                   )}
@@ -106,11 +106,11 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
 
               {/* Right Col: Image (Polaroid style) */}
               <div className="flex-1 relative p-6 md:p-12 flex items-center justify-center min-h-[300px] md:min-h-[400px]">
-                {/* Paper clips */}
-                <div className="absolute top-4 md:top-8 left-1/3 w-3 md:w-4 h-10 md:h-14 border-2 border-[#b0b0b0] rounded-full z-30 rotate-[15deg] shadow-sm"></div>
-                <div className="absolute top-2 md:top-6 left-[35%] w-3 md:w-4 h-8 md:h-10 border-2 border-[#b0b0b0] rounded-full z-30 rotate-[12deg] shadow-sm"></div>
-                
                 <div className="relative w-full aspect-[4/3] bg-[#efe8de] p-3 md:p-4 pb-10 md:pb-14 paper-shadow rotate-[3deg] transition-transform duration-500 group-hover:rotate-0">
+                  {/* Paper clips (Moved inside polaroid to always align with top edge) */}
+                  <div className="absolute -top-4 md:-top-5 left-[30%] w-3 md:w-4 h-10 md:h-12 border-2 border-[#b0b0b0] rounded-full z-30 rotate-[5deg] shadow-sm bg-white/20"></div>
+                  <div className="absolute -top-2 md:-top-3 left-[33%] w-3 md:w-4 h-8 md:h-10 border-2 border-[#b0b0b0] rounded-full z-30 rotate-[2deg] shadow-sm bg-white/20"></div>
+
                   <img
                     src={p.img}
                     alt={p.title}
