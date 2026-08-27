@@ -46,7 +46,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
             style={{ transform: hoveredProject === i ? "translateY(-10px) rotate(1deg)" : "translateY(0) rotate(0deg)" }}
           >
             {/* Folder Tab */}
-            <div className="absolute top-[-38px] left-4 md:left-12 w-40 md:w-48 h-10 bg-[#e3cdba] clip-folder-tab z-10 paper-shadow flex items-end px-6 pb-2 transition-colors duration-300">
+            <div className="absolute top-[-38px] left-4 md:left-12 w-40 md:w-48 h-10 bg-[#e3cdba] clip-folder-tab z-10 paper-shadow flex justify-center items-center pt-2 transition-colors duration-300">
               <span className="font-sans text-[11px] text-[#543f32] font-bold uppercase tracking-[0.15em] border-b border-[#543f32]/30">
                 PROJECT {p.num}
               </span>
