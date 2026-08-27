@@ -38,155 +38,77 @@ export const Navbar: React.FC<NavbarProps> = ({
 
   return (
     <nav
-      style={{
-        position: "fixed",
-        top: 0,
-        left: 0,
-        right: 0,
-        zIndex: 100,
-        display: "grid",
-        gridTemplateColumns: "1fr auto 1fr",
-        alignItems: "center",
-        padding: scrolled ? "16px 48px" : "28px 48px",
-        background: scrolled ? "rgba(1, 13, 4, 0.85)" : "transparent",
-        backdropFilter: scrolled ? "blur(20px)" : "none",
-        WebkitBackdropFilter: scrolled ? "blur(20px)" : "none",
-        borderBottom: scrolled
-          ? "1px solid rgba(255, 255, 255, 0.08)"
-          : "1px solid transparent",
-        boxShadow: scrolled ? "0 10px 30px rgba(0, 0, 0, 0.6)" : "none",
-        transition: "all 0.35s cubic-bezier(0.16, 1, 0.3, 1)",
-      }}
+      className={`fixed top-0 left-0 right-0 z-[100] grid grid-cols-[1fr_auto_1fr] items-center px-6 md:px-12 transition-all duration-300 ${
+        scrolled 
+          ? "py-3 bg-[#efe8de] paper-shadow border-b border-[#543f32]/20" 
+          : "py-6 bg-transparent"
+      }`}
     >
       {/* ── LEFT: Logo ── */}
       <div
         onClick={() => onNavigate("home")}
-        style={{
-          display: "flex",
-          alignItems: "center",
-          gap: "10px",
-          cursor: "pointer",
-        }}
+        className="flex items-center gap-2 cursor-pointer"
       >
-        <div
-          style={{
-            width: "22px",
-            height: "22px",
-            background: "#22c55e",
-            clipPath:
-              "polygon(0 0, 70% 0, 100% 30%, 100% 100%, 30% 100%, 0 70%)",
-            flexShrink: 0,
-          }}
-        />
-        <span
-          style={{
-            fontFamily: "'Barlow Condensed', sans-serif",
-            fontWeight: 800,
-            fontSize: "22px",
-            letterSpacing: "0.12em",
-            color: "#ffffff",
-          }}
-        >
-          CRTOAN
+        <span className="font-['Great_Vibes'] text-3xl md:text-4xl text-[#efe8de] md:text-[#543f32] leading-none pr-3 border-r border-[#efe8de]/30 md:border-[#543f32]/30" style={{ color: scrolled ? "#543f32" : "" }}>
+          CR
+        </span>
+        <span className="font-['Playfair_Display'] font-black text-lg md:text-xl tracking-[0.2em] text-[#efe8de] md:text-[#543f32] uppercase" style={{ color: scrolled ? "#543f32" : "" }}>
+          Toàn
         </span>
       </div>
 
-      {/* ── CENTER: Nav items (truly centered via grid) ── */}
-      <div style={{ display: "flex", gap: "44px", alignItems: "center" }}>
+      {/* ── CENTER: Nav items ── */}
+      <div className="hidden md:flex gap-10 items-center">
         {navItems.map((item) => (
           <button
             key={item}
             onClick={() => onNavigate(item.toLowerCase())}
-            style={{
-              fontFamily: "'Barlow Condensed', sans-serif",
-              fontWeight: 600,
-              fontSize: "13px",
-              letterSpacing: "0.1em",
-              color: "#fff",
-              background: "none",
-              border: "none",
-              cursor: "pointer",
-              opacity: 0.85,
-              transition: "opacity 0.2s, color 0.2s",
-              padding: 0,
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.opacity = "1";
-              e.currentTarget.style.color = "#22c55e";
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.opacity = "0.85";
-              e.currentTarget.style.color = "#fff";
-            }}
+            className="font-serif text-xs font-bold uppercase tracking-widest bg-transparent border-none cursor-pointer transition-transform hover:-translate-y-0.5 relative group"
+            style={{ color: scrolled ? "#543f32" : "#efe8de" }}
           >
             {item}
+            <span 
+              className="absolute -bottom-1.5 left-1/2 w-0 h-[1.5px] transition-all group-hover:w-full group-hover:left-0"
+              style={{ backgroundColor: scrolled ? "#543f32" : "#efe8de" }}
+            ></span>
           </button>
         ))}
       </div>
 
       {/* ── RIGHT: Language toggle ── */}
-      <div style={{ display: "flex", justifyContent: "flex-end" }}>
+      <div className="flex justify-end">
         <button
           onClick={toggleLang}
-          style={{
-            display: "flex",
-            alignItems: "center",
-            gap: "2px",
-            background: "rgba(255,255,255,0.06)",
-            border: "1px solid rgba(255,255,255,0.15)",
-            borderRadius: "100px",
-            padding: "7px 4px 7px 14px",
-            cursor: "pointer",
-            transition: "border-color 0.2s, background 0.2s",
+          className="flex items-center border rounded-sm px-1 py-1 shadow-sm transition-all hover:shadow-md hover:-translate-y-0.5"
+          style={{ 
+            backgroundColor: scrolled ? "#efe8de" : "transparent",
+            borderColor: scrolled ? "rgba(84, 63, 50, 0.3)" : "rgba(239, 232, 222, 0.3)"
           }}
-          onMouseEnter={(e) =>
-            (e.currentTarget.style.borderColor = "rgba(34,197,94,0.5)")
-          }
-          onMouseLeave={(e) =>
-            (e.currentTarget.style.borderColor = "rgba(255,255,255,0.15)")
-          }
+          title="Toggle Language"
         >
-          {/* Inactive label */}
-          <span
+          <span 
+            className="font-serif text-[10px] md:text-xs font-bold px-2 py-0.5"
             style={{
-              fontFamily: "'Barlow Condensed', sans-serif",
-              fontWeight: 700,
-              fontSize: "12px",
-              letterSpacing: "0.1em",
-              color: "rgba(255,255,255,0.35)",
+              color: lang === "EN" ? (scrolled ? "#efe8de" : "#5d4a3e") : (scrolled ? "#543f32" : "#efe8de"),
+              backgroundColor: lang === "EN" ? (scrolled ? "#543f32" : "#efe8de") : "transparent",
+              borderRadius: "2px"
             }}
           >
-            {lang === "EN" ? "VI" : "EN"}
+            EN
           </span>
-
-          <span
+          <span 
+            className="font-serif text-[10px] md:text-xs font-bold px-2 py-0.5"
             style={{
-              fontFamily: "'Barlow Condensed', sans-serif",
-              color: "rgba(255,255,255,0.3)",
-              fontSize: "13px",
-              margin: "0 4px",
+              color: lang === "VI" ? (scrolled ? "#efe8de" : "#5d4a3e") : (scrolled ? "#543f32" : "#efe8de"),
+              backgroundColor: lang === "VI" ? (scrolled ? "#543f32" : "#efe8de") : "transparent",
+              borderRadius: "2px"
             }}
           >
-            /
-          </span>
-
-          {/* Active pill */}
-          <span
-            style={{
-              fontFamily: "'Barlow Condensed', sans-serif",
-              fontWeight: 800,
-              fontSize: "12px",
-              letterSpacing: "0.1em",
-              color: "#010d04",
-              background: "#22c55e",
-              borderRadius: "100px",
-              padding: "4px 12px",
-            }}
-          >
-            {lang}
+            VI
           </span>
         </button>
       </div>
     </nav>
   );
 };
+

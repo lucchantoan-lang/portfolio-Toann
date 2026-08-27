@@ -25,240 +25,133 @@ const facts = [
   { num: "5+", label: "Happy clients" },
 ];
 
-const pillStyle: React.CSSProperties = {
-  fontFamily: "'Barlow Condensed', sans-serif",
-  fontSize: "12px",
-  fontWeight: 700,
-  letterSpacing: "0.06em",
-  textTransform: "uppercase",
-  color: "#ffffff",
-  background: "rgba(255,255,255,0.06)",
-  border: "1px solid rgba(255,255,255,0.18)",
-  borderRadius: "100px",
-  padding: "8px 18px",
-  whiteSpace: "nowrap",
-};
-
-const cardStyle: React.CSSProperties = {
-  background: "linear-gradient(135deg, #082010 0%, #041408 100%)",
-  border: "1px solid rgba(255,255,255,0.12)",
-  borderRadius: "20px",
-  padding: "32px",
-  boxShadow: "0 20px 50px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.08)",
-};
-
-const cardLabelStyle: React.CSSProperties = {
-  fontFamily: "'Barlow Condensed', sans-serif",
-  fontSize: "12px",
-  letterSpacing: "0.2em",
-  color: "#22c55e",
-  textTransform: "uppercase",
-  fontWeight: 700,
-  marginBottom: "18px",
-};
-
 export const AboutMeSection: React.FC = () => {
   return (
-    <section
-      id="about"
-      style={{
-        background: "#020e05",
-        padding: "100px 48px 40px",
-        position: "relative",
-      }}
-    >
+    <section id="about" className="py-32 px-6 md:px-12 max-w-6xl mx-auto relative">
+      
       {/* ── ROW 1: BIO (LEFT) + ẢNH (RIGHT) ────────────────────── */}
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "1fr 1.25fr",
-          gap: "64px",
-          alignItems: "stretch",
-          marginBottom: "80px",
-        }}
-      >
-        {/* ── CỘT TRÁI: TEXT & STATS ───────────────────── */}
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "space-between",
-          }}
-        >
-          <div>
-            <span
-              style={{
-                fontFamily: "'Barlow Condensed', sans-serif",
-                fontSize: "12px",
-                letterSpacing: "0.2em",
-                color: "#22c55e",
-                textTransform: "uppercase",
-                fontWeight: 700,
-              }}
-            >
-              ABOUT ME
+      <div className="flex flex-col-reverse md:flex-row gap-16 md:gap-24 items-stretch mb-24">
+        
+        {/* ── LEFT: TEXT & STATS (Notebook Paper) ───────────────────── */}
+        <div className="flex-1 relative bg-[#fdfaf6] p-10 md:p-14 paper-shadow z-10 rotate-[-1deg]">
+          
+          {/* Lined paper pattern (simulated) */}
+          <div className="absolute inset-0 opacity-20 pointer-events-none" style={{ backgroundImage: 'repeating-linear-gradient(transparent, transparent 31px, #a0c4d8 31px, #a0c4d8 32px)' }}></div>
+          
+          {/* Red margin line */}
+          <div className="absolute top-0 bottom-0 left-12 w-[1.5px] bg-[#e08e8e] opacity-40 z-0"></div>
+          
+          <div className="relative z-10 pl-6">
+            <span className="font-['Great_Vibes'] text-4xl md:text-5xl text-[#543f32] block mb-4 mt-[-10px]">
+              About me
             </span>
 
-            <h2
-              style={{
-                fontFamily: "'Barlow Condensed', sans-serif",
-                fontWeight: 900,
-                fontSize: "clamp(38px, 4.2vw, 68px)",
-                lineHeight: 0.98,
-                textTransform: "uppercase",
-                margin: "16px 0 28px 0",
-                letterSpacing: "-0.01em",
-                color: "#ffffff",
-              }}
-            >
-              I DESIGN SIMPLE DIGITAL
-              <br />
+            <h2 className="font-['Playfair_Display'] font-black text-4xl md:text-5xl uppercase text-[#3b2c21] leading-[1.1] mb-8">
+              I DESIGN SIMPLE DIGITAL<br />
               EXPERIENCES, NOT JUST UI.
             </h2>
 
-            <p
-              style={{
-                fontFamily: "'Barlow', sans-serif",
-                fontSize: "15px",
-                color: "rgba(255,255,255,0.7)",
-                lineHeight: 1.8,
-                marginBottom: "18px",
-              }}
-            >
-              Hi, I'm <strong style={{ color: "#fff" }}>Toan</strong> — a UI/UX Designer with
+            <p className="font-serif text-base text-[#543f32]/90 leading-relaxed mb-6">
+              Hi, I'm <strong className="font-bold text-[#3b2c21]">Toan</strong> — a UI/UX Designer with
               a background in Information Technology. I enjoy turning user needs and
               complex problems into simple, intuitive digital experiences.
             </p>
 
-            <p
-              style={{
-                fontFamily: "'Barlow', sans-serif",
-                fontSize: "15px",
-                color: "rgba(255,255,255,0.7)",
-                lineHeight: 1.8,
-                marginBottom: "32px",
-              }}
-            >
+            <p className="font-serif text-base text-[#543f32]/90 leading-relaxed mb-12">
               My design process starts with understanding users, their needs, and their
               goals. I focus on creating clear interfaces, smooth user flows, and
               practical solutions that are easy to use.
             </p>
-          </div>
 
-          {/* Stats 3 cột */}
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(3, 1fr)",
-              gap: "24px",
-              paddingTop: "24px",
-              borderTop: "1px solid rgba(255,255,255,0.08)",
-            }}
-          >
-            {facts.map(({ num, label }) => (
-              <div key={label}>
-                <div
-                  style={{
-                    fontFamily: "'Barlow Condensed', sans-serif",
-                    fontWeight: 900,
-                    fontSize: "52px",
-                    lineHeight: 1,
-                    color: "#22c55e",
-                    letterSpacing: "-0.02em",
-                  }}
-                >
-                  {num}
+            {/* Stats */}
+            <div className="grid grid-cols-3 gap-6 pt-8 border-t-2 border-[#543f32]/10 border-dashed">
+              {facts.map(({ num, label }) => (
+                <div key={label}>
+                  <div className="font-['Playfair_Display'] font-black text-4xl text-[#3b2c21] mb-2">
+                    {num}
+                  </div>
+                  <div className="font-serif text-[10px] md:text-xs uppercase tracking-widest text-[#543f32]/70 font-bold leading-tight">
+                    {label}
+                  </div>
                 </div>
-                <div
-                  style={{
-                    fontFamily: "'Barlow Condensed', sans-serif",
-                    fontSize: "11px",
-                    letterSpacing: "0.15em",
-                    color: "rgba(255,255,255,0.45)",
-                    textTransform: "uppercase",
-                    marginTop: "8px",
-                    fontWeight: 700,
-                  }}
-                >
-                  {label}
-                </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
+          
+          {/* Tape holding it */}
+          <div className="absolute -top-4 left-1/2 -translate-x-1/2 w-24 h-8 bg-white/40 backdrop-blur-sm border border-white/20 rotate-[-2deg] shadow-sm"></div>
         </div>
 
-        {/* ── CỘT PHẢI: ẢNH CHÂN DUNG (CHIỀU CAO KHỚP 100% CỘT TEXT) ─── */}
-        <div
-          style={{
-            position: "relative",
-            borderRadius: "28px",
-            overflow: "hidden",
-            width: "100%",
-            height: "100%",
-            minHeight: "100%",
-            boxShadow:
-              "0 32px 70px rgba(0,0,0,0.65), 0 0 0 1px rgba(255,255,255,0.12)",
-          }}
-        >
-          <img
-            src={avatarImg}
-            alt="Toan — UI/UX Designer"
-            style={{
-              width: "100%",
-              height: "100%",
-              objectFit: "cover",
-              objectPosition: "center center",
-              display: "block",
-            }}
-          />
+        {/* ── RIGHT: PORTRAIT PHOTO (Polaroid) ─── */}
+        <div className="w-full md:w-[40%] flex justify-center items-center">
+          <div className="relative bg-[#efe8de] p-4 pb-16 paper-shadow rotate-[3deg] transition-transform duration-500 hover:rotate-0 w-full max-w-[360px]">
+            <img
+              src={avatarImg}
+              alt="Toan — UI/UX Designer"
+              className="w-full h-auto aspect-[3/4] object-cover filter sepia-[0.2] contrast-[1.1] rounded-sm"
+            />
+            <div className="absolute bottom-5 left-1/2 -translate-x-1/2 font-['Great_Vibes'] text-3xl text-[#543f32]/80 whitespace-nowrap">
+              Me in 2026
+            </div>
+            
+            {/* Paper clip */}
+            <div className="absolute -top-6 -right-2 w-4 h-16 border-[3px] border-[#b0b0b0] rounded-full z-10 rotate-12 shadow-sm"></div>
+          </div>
         </div>
       </div>
 
-      {/* ── ROW 2: BỐ CỤC SKILLS NẰM NGANG (UI SKILLS | UX SKILLS | TOOLS) ── */}
-      <div
-        id="skills"
-        style={{
-          display: "grid",
-          gridTemplateColumns: "1fr 1fr 1fr",
-          gap: "24px",
-        }}
-      >
+      {/* ── ROW 2: SKILLS (Index Cards) ── */}
+      <div id="skills" className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8 mt-12 relative z-20">
+        
         {/* UI Skills */}
-        <div style={cardStyle}>
-          <div style={cardLabelStyle}>UI Skills</div>
-          <div style={{ display: "flex", flexWrap: "wrap", gap: "8px" }}>
-            {uiSkills.map((s) => (
-              <span key={s} style={pillStyle}>
-                {s}
-              </span>
-            ))}
-          </div>
+        <div className="bg-[#fdfbf6] p-8 paper-shadow rotate-[-2deg] relative">
+           <div className="font-['Great_Vibes'] text-3xl text-[#543f32] mb-6 border-b border-[#543f32]/20 pb-2">UI Skills</div>
+           <ul className="flex flex-col gap-4 font-serif text-[#3b2c21]">
+             {uiSkills.map(s => (
+               <li key={s} className="flex items-center gap-3">
+                 <span className="text-[#a0c4d8]">✦</span> {s}
+               </li>
+             ))}
+           </ul>
+           {/* Push pin */}
+           <div className="absolute -top-3 right-6 w-4 h-4 rounded-full bg-[#fdfdfd] shadow-sm border border-gray-200 flex items-center justify-center">
+             <div className="w-1.5 h-1.5 rounded-full bg-[#e0e0e0]"></div>
+           </div>
         </div>
 
         {/* UX Skills */}
-        <div style={cardStyle}>
-          <div style={cardLabelStyle}>UX Skills</div>
-          <div style={{ display: "flex", flexWrap: "wrap", gap: "8px" }}>
-            {uxSkills.map((s) => (
-              <span key={s} style={pillStyle}>
-                {s}
-              </span>
-            ))}
-          </div>
+        <div className="bg-[#fdfbf6] p-8 paper-shadow rotate-[1deg] relative mt-4 md:mt-0">
+           <div className="font-['Great_Vibes'] text-3xl text-[#543f32] mb-6 border-b border-[#543f32]/20 pb-2">UX Skills</div>
+           <ul className="flex flex-col gap-4 font-serif text-[#3b2c21]">
+             {uxSkills.map(s => (
+               <li key={s} className="flex items-center gap-3">
+                 <span className="text-[#a0c4d8]">✦</span> {s}
+               </li>
+             ))}
+           </ul>
+           {/* Push pin */}
+           <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-[#fdfdfd] shadow-sm border border-gray-200 flex items-center justify-center">
+             <div className="w-1.5 h-1.5 rounded-full bg-[#e0e0e0]"></div>
+           </div>
         </div>
 
-        {/* Tools I Use */}
-        <div style={cardStyle}>
-          <div style={cardLabelStyle}>Tools I Use</div>
-          <div style={{ display: "flex", flexWrap: "wrap", gap: "8px" }}>
-            {tools.map((s) => (
-              <span key={s} style={pillStyle}>
-                {s}
-              </span>
-            ))}
-          </div>
+        {/* Tools */}
+        <div className="bg-[#fdfbf6] p-8 paper-shadow rotate-[-1deg] relative mt-8 md:mt-0">
+           <div className="font-['Great_Vibes'] text-3xl text-[#543f32] mb-6 border-b border-[#543f32]/20 pb-2">Tools I Use</div>
+           <ul className="flex flex-col gap-4 font-serif text-[#3b2c21]">
+             {tools.map(s => (
+               <li key={s} className="flex items-center gap-3">
+                 <span className="text-[#a0c4d8]">✦</span> {s}
+               </li>
+             ))}
+           </ul>
+           {/* Push pin */}
+           <div className="absolute -top-3 left-6 w-4 h-4 rounded-full bg-[#fdfdfd] shadow-sm border border-gray-200 flex items-center justify-center">
+             <div className="w-1.5 h-1.5 rounded-full bg-[#e0e0e0]"></div>
+           </div>
         </div>
       </div>
     </section>
   );
 };
+

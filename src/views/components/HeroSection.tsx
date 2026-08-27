@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { NavItem } from "../../models/types";
 import { Navbar } from "./Navbar";
 import heroAvatarImg from "../../imports/hero-avatar.png";
@@ -14,275 +14,125 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
   servicesBar,
   onNavigate,
 }) => {
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setIsLoaded(true), 50);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
-    <>
     <div
       id="home"
-      style={{
-        position: "relative",
-        width: "100%",
-        height: "100vh",
-        minHeight: "700px",
-        maxHeight: "1080px",
-        background:
-          "radial-gradient(ellipse 70% 80% at 50% 40%, #166534 0%, #14532d 40%, #052e16 70%, #010d04 100%)",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "space-between",
-        overflow: "hidden",
-        boxSizing: "border-box",
-      }}
+      className="relative w-full min-h-screen flex flex-col items-center justify-between overflow-hidden"
     >
-      {/* ── 1. NAVBAR ───────────────────────────────── */}
       <Navbar navItems={navItems} onNavigate={onNavigate} />
 
-      {/* ── 2. HERO 3-COLUMN CONTENT (CĂN GIỮA & TRẢI ĐỀU 2 BÊN) ─ */}
       <div
-        style={{
-          position: "relative",
-          flex: 1,
-          display: "grid",
-          gridTemplateColumns: "1.2fr 1fr 1.2fr",
-          alignItems: "center",
-          padding: "80px 48px 0",
-          zIndex: 2,
-        }}
+        className={`relative w-full max-w-5xl px-6 flex justify-center items-center flex-1 transition-all duration-[1000ms] ease-out ${
+          isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-20"
+        }`}
       >
-        {/* ── CỘT TRÁI: TIÊU ĐỀ CHÍNH TRẢI ĐỀU ───────── */}
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "flex-start",
-            zIndex: 2,
-            paddingRight: "20px",
-          }}
-        >
-          <h1
-            style={{
-              fontFamily: "'Barlow Condensed', sans-serif",
-              fontWeight: 900,
-              fontSize: "clamp(42px, 4.8vw, 76px)",
-              lineHeight: 0.96,
-              letterSpacing: "-0.01em",
-              textTransform: "uppercase",
-              color: "#ffffff",
-              margin: "0 0 24px 0",
-              maxWidth: "460px",
-            }}
-          >
-            TURNING IDEAS
-            <br />
-            INTO SIMPLE
-            <br />
-            EXPERIENCES.
-          </h1>
-          <p
-            style={{
-              fontFamily: "'Barlow Condensed', sans-serif",
-              fontWeight: 500,
-              fontSize: "13px",
-              letterSpacing: "0.1em",
-              lineHeight: 1.65,
-              color: "rgba(255,255,255,0.75)",
-              textTransform: "uppercase",
-              maxWidth: "360px",
-              margin: 0,
-            }}
-          >
-            UI/UX DESIGNER FOCUSED ON CREATING
-            <br />
-            SIMPLE & USER-FRIENDLY DIGITAL EXPERIENCES.
-          </p>
-        </div>
+        {/* ── THE MANILA FOLDER ────────────────────────────── */}
+        <div className="relative w-full max-w-[900px] aspect-[4/3] md:aspect-[16/10] mt-12 z-10">
+          
+          {/* Photograph protruding from inside */}
+          <div className="absolute top-[-60px] left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0 md:right-32 w-40 h-56 md:w-56 md:h-[300px] bg-[#efe8de] p-2 md:p-3 paper-shadow z-0 rotate-[6deg] transition-transform hover:rotate-[2deg] hover:-translate-y-4">
+            <img 
+              src={heroAvatarImg} 
+              alt="CRTOAN" 
+              className="w-full h-full object-cover filter grayscale sepia-[0.2] contrast-[1.1] rounded-sm" 
+            />
+            {/* Paperclip Simulation */}
+            <div className="absolute top-[-20px] left-10 md:left-16 w-3 h-10 md:w-4 md:h-14 border-2 border-[#b0b0b0] rounded-full z-10 shadow-sm" style={{ borderRightWidth: '1px' }}></div>
+            <div className="absolute top-[-5px] left-11 md:left-[68px] w-3 h-8 md:w-4 md:h-10 border-2 border-[#b0b0b0] rounded-full z-10 shadow-sm" style={{ borderLeftWidth: '1px' }}></div>
+          </div>
 
-        {/* ── CỘT GIỮA: ẢNH CHÂN DUNG & HÀO QUANG NỔI BẬT ────── */}
-        <div
-          style={{
-            position: "relative",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            height: "100%",
-            zIndex: 1,
-          }}
-        >
-          {/* Hào quang lớp rộng (Ambient Halo Glow) */}
-          <div
-            style={{
-              position: "absolute",
-              top: "45%",
-              left: "50%",
-              transform: "translate(-50%, -50%)",
-              width: "560px",
-              height: "560px",
-              borderRadius: "50%",
-              background:
-                "radial-gradient(circle, rgba(34, 197, 94, 0.4) 0%, rgba(34, 197, 94, 0.15) 50%, transparent 75%)",
-              filter: "blur(65px)",
-              pointerEvents: "none",
-              zIndex: 0,
-            }}
-          />
+          {/* Folder Tab */}
+          <div className="absolute top-0 left-8 md:left-24 w-40 md:w-56 h-12 bg-[#b0b9bd] clip-folder-tab z-10 paper-shadow flex items-end px-4 pb-2">
+            <span className="text-[10px] md:text-xs font-serif text-[#543f32] uppercase tracking-[0.3em] border-b border-[#543f32]/40 pb-0.5">
+              UI/UX DESIGN
+            </span>
+          </div>
 
-          {/* Hào quang tâm sáng rực (Vibrant Core Aura behind head & body) */}
-          <div
-            style={{
-              position: "absolute",
-              top: "42%",
-              left: "50%",
-              transform: "translate(-50%, -50%)",
-              width: "380px",
-              height: "400px",
-              borderRadius: "50%",
-              background:
-                "radial-gradient(ellipse at center, rgba(134, 239, 172, 0.45) 0%, rgba(34, 197, 94, 0.45) 45%, transparent 75%)",
-              filter: "blur(35px)",
-              pointerEvents: "none",
-              zIndex: 0,
-            }}
-          />
+          {/* Folder Body */}
+          <div className="absolute top-[38px] left-0 w-full h-[calc(100%-40px)] bg-[#b0b9bd] paper-shadow rounded-sm rounded-tr-xl z-20 flex flex-col justify-center items-center">
+            
+            {/* Main Typography */}
+            <div className="text-center mt-[-40px] md:mt-[-20px] z-30 pointer-events-none select-none relative">
+              <h1 className="font-['Great_Vibes'] text-[90px] md:text-[160px] text-[#543f32] leading-[0.5] font-normal drop-shadow-md -rotate-3 ml-[-20px]">
+                Creative
+              </h1>
+              <h2 className="font-['Playfair_Display'] text-[45px] md:text-[80px] text-[#543f32] font-black uppercase tracking-[0.1em] mt-2 drop-shadow-sm">
+                Portfolio
+              </h2>
+            </div>
 
-          {/* Ảnh chân dung (kích thước lớn hơn và nổi bật) */}
-          <img
-            src={heroAvatarImg}
-            alt="CRTOAN — UI/UX Designer"
-            style={{
-              position: "relative",
-              zIndex: 1,
-              width: "100%",
-              maxWidth: "530px",
-              maxHeight: "calc(100vh - 180px)",
-              height: "auto",
-              objectFit: "contain",
-              objectPosition: "center center",
-              display: "block",
-              maskImage:
-                "linear-gradient(to bottom, black 82%, transparent 100%)",
-              WebkitMaskImage:
-                "linear-gradient(to bottom, black 82%, transparent 100%)",
-            }}
-          />
-        </div>
+            {/* Details Label */}
+            <div className="absolute bottom-6 md:bottom-10 left-6 md:left-10 bg-[#efe8de] border border-[#543f32]/20 rounded-sm px-4 md:px-6 py-2 md:py-3 flex items-center gap-4 paper-shadow">
+              <span className="font-['Great_Vibes'] text-2xl md:text-4xl text-[#543f32] pr-4 border-r border-[#543f32]/30 pt-1">
+                Designer
+              </span>
+              <div className="flex flex-col">
+                <span className="font-serif text-[10px] md:text-xs text-[#543f32] font-bold uppercase tracking-widest leading-tight">
+                  CR. Toàn
+                </span>
+                <span className="font-serif text-[10px] md:text-xs text-[#543f32] italic leading-tight">
+                  Based in VN
+                </span>
+              </div>
+            </div>
 
-        {/* ── CỘT PHẢI: BIO & CTA BUTTON (DỜI SANG PHẢI) ─── */}
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "flex-end",
-            zIndex: 2,
-          }}
-        >
-          <div style={{ maxWidth: "400px" }}>
-            <p
-              style={{
-                fontFamily: "'Barlow Condensed', sans-serif",
-                fontWeight: 700,
-                fontSize: "clamp(18px, 2vw, 24px)",
-                lineHeight: 1.4,
-                letterSpacing: "0.04em",
-                textTransform: "uppercase",
-                color: "#ffffff",
-                marginBottom: "32px",
-              }}
-            >
-              I'M A UI/UX DESIGNER WITH A BACKGROUND IN IT.
-              <br />
-              I ENJOY TURNING COMPLEX PROBLEMS
-              <br />
-              INTO SIMPLE DIGITAL EXPERIENCES.
-            </p>
+            {/* Call to Action Button */}
             <button
               onClick={() => onNavigate("works")}
-              style={{
-                background: "#ffffff",
-                color: "#010d04",
-                border: "none",
-                borderRadius: "100px",
-                padding: "16px 44px",
-                fontFamily: "'Barlow Condensed', sans-serif",
-                fontWeight: 700,
-                fontSize: "14px",
-                letterSpacing: "0.12em",
-                textTransform: "uppercase",
-                cursor: "pointer",
-                transition: "background 0.2s, transform 0.15s",
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.background = "#f0f0f0";
-                e.currentTarget.style.transform = "scale(1.03)";
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.background = "#ffffff";
-                e.currentTarget.style.transform = "scale(1)";
-              }}
+              className="absolute bottom-6 md:bottom-10 right-6 md:right-10 font-serif text-[10px] md:text-sm uppercase tracking-[0.2em] text-[#efe8de] bg-[#543f32] px-6 py-3 md:px-8 md:py-4 rounded-sm paper-shadow transition-transform hover:-translate-y-1 hover:shadow-lg border border-[#3b2c21]"
             >
-              VIEW PROJECTS
+              Explore Works
             </button>
+          </div>
+          
+          {/* Push Pins Decoration */}
+          <div className="absolute top-16 left-[-15px] z-30">
+            {/* Pin Head */}
+            <div className="w-5 h-5 rounded-full bg-[#fdfdfd] shadow-[0_2px_5px_rgba(0,0,0,0.5)] border border-gray-200 flex items-center justify-center relative z-10">
+              <div className="w-1.5 h-1.5 bg-[#e0e0e0] rounded-full inset-shadow-sm"></div>
+            </div>
+            {/* Pin Needle/Shadow */}
+            <div className="absolute top-2.5 left-2.5 w-16 h-[2px] bg-black/30 origin-left rotate-45 z-0 blur-[1px]"></div>
+          </div>
+          
+          <div className="absolute bottom-32 left-[-20px] z-30">
+            <div className="w-4 h-4 rounded-full bg-[#fdfdfd] shadow-[0_2px_5px_rgba(0,0,0,0.5)] border border-gray-200 flex items-center justify-center relative z-10">
+              <div className="w-1 h-1 bg-[#e0e0e0] rounded-full"></div>
+            </div>
+            <div className="absolute top-2 left-2 w-10 h-[1.5px] bg-black/30 origin-left -rotate-[20deg] z-0 blur-[1px]"></div>
           </div>
         </div>
       </div>
-
-      {/* ── 3. CRTOAN BANNER & SERVICES FOOTER ───────── */}
-      <div
-        style={{
-          background: "transparent",
-          padding: "0",
-          overflow: "hidden",
-          position: "relative",
-          zIndex: 3,
-          marginTop: "-120px",
-        }}
-      >
-        <div style={{ lineHeight: 0.88, overflow: "hidden", paddingBottom: "18px" }}>
-          <span
-            style={{
-              display: "block",
-              fontFamily: "'Barlow Condensed', sans-serif",
-              fontWeight: 900,
-              fontSize: "clamp(75px, 18.5vw, 240px)",
-              letterSpacing: "-0.02em",
-              textTransform: "uppercase",
-              color: "#ffffff",
-              whiteSpace: "nowrap",
-              textAlign: "center",
-              userSelect: "none",
-            }}
-          >
-            CRTOAN
-          </span>
-        </div>
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            padding: "12px 48px 16px",
-            borderTop: "1px solid rgba(255,255,255,0.08)",
-            background: "rgba(1, 13, 4, 0.4)",
-            backdropFilter: "blur(8px)",
-          }}
-        >
-          {servicesBar.map((s) => (
-            <span
-              key={s}
-              style={{
-                fontFamily: "'Barlow Condensed', sans-serif",
-                fontWeight: 500,
-                fontSize: "11px",
-                letterSpacing: "0.12em",
-                color: "rgba(255,255,255,0.55)",
-                textTransform: "uppercase",
-              }}
-            >
-              {s}
-            </span>
-          ))}
-        </div>
+      
+      {/* ── VINTAGE MARQUEE FOOTER ────────────────────────────── */}
+      <div className="w-full bg-[#3b2c21] border-y-4 border-[#251b14] overflow-hidden py-3 md:py-4 relative z-30 shadow-[0_-5px_25px_rgba(0,0,0,0.4)]">
+         <div className="animate-marquee flex w-max">
+            <div className="flex shrink-0 items-center">
+               {[...servicesBar, ...servicesBar].map((s, i) => (
+                  <span key={i} className="font-serif text-xs md:text-sm text-[#efe8de] tracking-[0.3em] uppercase px-8 md:px-12 flex items-center gap-8 md:gap-12">
+                    {s} 
+                    <span className="font-serif text-[#b0b9bd] text-[8px] md:text-[10px]">✦</span>
+                  </span>
+               ))}
+            </div>
+            <div className="flex shrink-0 items-center">
+               {[...servicesBar, ...servicesBar].map((s, i) => (
+                  <span key={i} className="font-serif text-xs md:text-sm text-[#efe8de] tracking-[0.3em] uppercase px-8 md:px-12 flex items-center gap-8 md:gap-12">
+                    {s} 
+                    <span className="font-serif text-[#b0b9bd] text-[8px] md:text-[10px]">✦</span>
+                  </span>
+               ))}
+            </div>
+         </div>
       </div>
     </div>
-    </>
   );
 };
+

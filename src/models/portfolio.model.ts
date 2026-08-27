@@ -4,7 +4,7 @@ import tiktokImg from "../imports/tiktok-shop-summit.png";
 import internhubImg from "../imports/internhub-fpt.png";
 import nepNhaImg from "../imports/nep-nha.png";
 
-export const NAV_ITEMS: NavItem[] = ["WORKS", "ABOUT", "SKILLS", "RESUME", "CONTACT"];
+export const NAV_ITEMS: NavItem[] = ["ABOUT", "SKILLS", "WORKS", "PROCESS", "CONTACT"];
 
 export const SERVICES_BAR: string[] = [
   "USER RESEARCH",
@@ -59,7 +59,7 @@ export const PROJECTS_LIST: ProjectItem[] = [
     num: "01",
     title: "HDBANK Di-CMB",
     category: "Digital Banking & Experience",
-    year: "2025",
+    year: "2026",
     desc: "Ứng dụng cung cấp cho doanh nghiệp một trải nghiệm tối ưu trong việc quản lý tài chính và giao dịch ngân hàng một cách nhanh chóng, bảo mật và thông minh.",
     tags: ["UI/UX Design", "Design System", "Fintech", "Mobile & Web App"],
     img: hdbankImg,
@@ -79,7 +79,7 @@ export const PROJECTS_LIST: ProjectItem[] = [
     num: "03",
     title: "INTERNHUB FPT",
     category: "Web & Mobile App · HR Tech",
-    year: "2025",
+    year: "2026",
     desc: "Nền tảng ứng dụng dành cho thực tập sinh FPT giúp tối ưu quy trình check-in/check-out hàng ngày, theo dõi lịch làm việc trực quan, quản lý thời gian hiệu quả và tạo các phiếu xin nghỉ phép, phiếu yêu cầu một cách nhanh chóng, tiện lợi.",
     tags: ["UI/UX Design", "Mobile App", "Design System", "HR Tech", "User Flow"],
     img: internhubImg,

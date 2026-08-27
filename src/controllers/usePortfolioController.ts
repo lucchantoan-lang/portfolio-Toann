@@ -21,9 +21,10 @@ export function usePortfolioController() {
     const target = id.toLowerCase();
     const element =
       document.getElementById(target) ||
-      (target === "works" ? document.getElementById("projects") : null) ||
-      (target === "skills" ? document.getElementById("services") : null) ||
-      (target === "resume" ? document.getElementById("about") : null) ||
+      (target === "about" ? document.getElementById("about") : null) ||
+      (target === "skills" ? document.getElementById("skills") : null) ||
+      (target === "works" ? document.getElementById("works") : null) ||
+      (target === "process" ? document.getElementById("process") : null) ||
       (target === "contact" ? document.getElementById("contacts") : null);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });

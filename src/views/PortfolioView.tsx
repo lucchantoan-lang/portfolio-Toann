@@ -2,9 +2,8 @@ import React from "react";
 import { usePortfolioController } from "../controllers/usePortfolioController";
 import { HeroSection } from "./components/HeroSection";
 import { ProjectsSection } from "./components/ProjectsSection";
-import { ServicesSection } from "./components/ServicesSection";
+import { ProcessSection } from "./components/ProcessSection";
 import { AboutMeSection } from "./components/AboutMeSection";
-import { TeamSection } from "./components/TeamSection";
 import { ContactSection } from "./components/ContactSection";
 
 export const PortfolioView: React.FC = () => {
@@ -25,12 +24,7 @@ export const PortfolioView: React.FC = () => {
 
   return (
     <div
-      style={{
-        fontFamily: "'Barlow', sans-serif",
-        background: "#010d04",
-        color: "#fff",
-        overflowX: "hidden",
-      }}
+      className="overflow-x-hidden"
     >
       {/* ── HERO & BANNER ────────────────────────────── */}
       <HeroSection
@@ -49,18 +43,11 @@ export const PortfolioView: React.FC = () => {
         onHoverProject={setHoveredProject}
       />
 
-      {/* ── SERVICES ─────────────────────────────────── */}
-      <ServicesSection
-        services={servicesList}
-        openService={openService}
-        onToggleService={toggleService}
-      />
-
-      {/* ── TEAM ─────────────────────────────────────── */}
-      <TeamSection team={teamMembers} />
+      {/* ── PROCESS ─────────────────────────────────── */}
+      <ProcessSection />
 
       {/* ── CONTACT & FOOTER ─────────────────────────── */}
-      <ContactSection socialLinks={socialLinks} />
+      <ContactSection />
     </div>
   );
 };
