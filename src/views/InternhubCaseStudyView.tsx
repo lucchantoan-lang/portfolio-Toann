@@ -29,7 +29,7 @@ export const InternhubCaseStudyView: React.FC = () => {
     <div className="min-h-screen bg-[#f4f0ea] text-[#3b2c21] font-serif overflow-x-hidden relative">
       
       {/* Background Noise & Texture */}
-      <div className="fixed inset-0 pointer-events-none z-0 opacity-40 mix-blend-multiply" style={{ backgroundImage: 'url("https://www.transparenttextures.com/patterns/cream-paper.png")' }}></div>
+      <div className="fixed inset-0 pointer-events-none z-0 opacity-15" style={{ backgroundImage: 'url("https://www.transparenttextures.com/patterns/cream-paper.png")' }}></div>
 
       {/* ── NAVIGATION (Paper Tag) ────────────────────────────── */}
       <nav className="fixed top-8 left-8 z-50">
